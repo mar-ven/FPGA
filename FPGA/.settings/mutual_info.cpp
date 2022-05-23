@@ -186,8 +186,8 @@ extern "C"{
 #pragma HLS INTERFACE s_axilite port=mutual_info register bundle=control
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
-	for(int k = 0; k < N_COUPLES; k++) {
-		compute(input_img + k * DIMENSION * DIMENSION, input_ref + k * DIMENSION * DIMENSION, mutual_info, k == N_COUPLES - 1);
+	for(int k = 0; k < N_COUPLES / HIST_PE; k++) {
+		compute(input_img + k * DIMENSION * DIMENSION, input_ref + k * DIMENSION * DIMENSION, mutual_info, k == N_COUPLES / HIST_PE - 1);
 	}
 
 }
@@ -215,7 +215,7 @@ extern "C"{
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
 
-	static INPUT_DATA_TYPE ref_img[NUM_INPUT_DATA] = {0};
+	static INPUT_DATA_TYPE ref_img[N_COUPLES * DIMENSION * DIMENSION] = {0};
 
 #ifdef URAM
 #pragma HLS RESOURCE variable=ref_img core=RAM_1P_URAM
@@ -226,8 +226,8 @@ extern "C"{
 					*status = 1;
 					*mutual_info = 0.0;
 					break;
-	case COMPUTE:	for(int k = 0; k < N_COUPLES; k++) {
-						compute(input_img + k * DIMENSION * DIMENSION, input_ref + k * DIMENSION * DIMENSION, mutual_info, k == N_COUPLES - 1);
+	case COMPUTE:	for(int k = 0; k < N_COUPLES / HIST_PE; k++) {
+						compute(input_img + k * DIMENSION * DIMENSION, input_ref + k * DIMENSION * DIMENSION, mutual_info, k == N_COUPLES / HIST_PE- 1);
 					}
 					*status = 1;
 					break;

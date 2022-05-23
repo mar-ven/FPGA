@@ -3,5 +3,8 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../.settings/testbench.cpp in debug mode
    Compiling ../../../.settings/mutual_info.cpp in debug mode
    Generating csim.exe
-ERR: [SIM 100] CSim failed with errors.
+Histogram computedSoftware MI -23.836014
+First Hardware MI -148.817230
+Second Hardware MI -148.817230
+ERR: [SIM 100] 'csim_design' failed: nonzero return value.
 INFO: [SIM 3] *************** CSIM finish ***************

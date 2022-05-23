@@ -60,7 +60,7 @@
   Joint Histogram computations
  */
 
- #define HIST_PE 2
+ #define HIST_PE 1
  //2
  #define UNPACK_DATA_BITWIDTH 8
  //0
@@ -80,7 +80,7 @@
  #define J_HISTO_ROWS 256
  //3
  #define J_HISTO_COLS J_HISTO_ROWS
- #define MIN_HIST_BITS 18
+ #define MIN_HIST_BITS 19
  //4
  //#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(MYROWS*MYCOLS)))
  // TODO overflow non contemplato :D, sarebbe + 1

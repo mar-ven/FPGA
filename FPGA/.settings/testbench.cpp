@@ -70,8 +70,8 @@ typedef unsigned char MY_PIXEL;
 int main(int argc, char *argv[]){
 
 
-   MY_PIXEL ref[N_COUPLES][DIMENSION * DIMENSION];
-   MY_PIXEL flt[N_COUPLES][DIMENSION * DIMENSION];
+   MY_PIXEL ref[N_COUPLES * DIMENSION * DIMENSION];
+   MY_PIXEL flt[N_COUPLES * DIMENSION * DIMENSION];
 
    int myseed = 1234;
 
@@ -79,13 +79,9 @@ int main(int argc, char *argv[]){
    std::uniform_int_distribution<int> rng_dist(0, MAX_RANGE);
 
    data_t mihls_0, mihls_1, mihls_2;
-   int k;
-   for(k=0;k<N_COUPLES;k++){
-	   for(int i=0;i<DIMENSION;i++){
-		  for(int j=0;j<DIMENSION;j++){
-			 ref[k][i *DIMENSION + j]=static_cast<unsigned char>(rng_dist(rng));
-		  }
-      }
+   
+   for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
+      ref[i] = static_cast<unsigned char>(rng_dist(rng));
    }
 
 #ifdef CACHING
@@ -95,12 +91,8 @@ int main(int argc, char *argv[]){
    printf("Status %d\n", status);
 #endif
 
-   for(int k = 0; k < N_COUPLES; k++) {
-	   for(int i=0;i<DIMENSION;i++){
-		  for(int j=0;j<DIMENSION;j++){
-			 flt[k][i *DIMENSION + j]=static_cast<unsigned char>(rng_dist(rng));
-		  }
-      }
+   for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
+      flt[i] = static_cast<unsigned char>(rng_dist(rng));
    }
 
 
@@ -114,8 +106,8 @@ int main(int argc, char *argv[]){
    for(int k = 0; k < N_COUPLES; k++) {
 	   for(int i=0;i<DIMENSION;i++){
 		  for(int j=0;j<DIMENSION;j++){
-			 unsigned int a=ref[k][i *DIMENSION + j];
-			 unsigned int b=flt[k][i *DIMENSION + j];
+			 unsigned int a=ref[k * DIMENSION * DIMENSION + i * DIMENSION + j];
+			 unsigned int b=flt[k * DIMENSION * DIMENSION + i * DIMENSION + j];
 			 j_h[a][b]= (j_h[a][b])+1;
 		  }
 	   }
