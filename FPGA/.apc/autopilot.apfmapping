@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="entropy.h" path="/home/users/marco.venere/FPGA/FPGA/.settings/entropy.h"/>
+    <originFiles name="histogram.h" path="/home/users/marco.venere/FPGA/FPGA/.settings/histogram.h"/>
+    <originFiles name="mutual_info.cpp" path="/home/users/marco.venere/FPGA/FPGA/.settings/mutual_info.cpp"/>
+    <originFiles name="mutual_info.hpp" path="/home/users/marco.venere/FPGA/FPGA/.settings/mutual_info.hpp"/>
+    <originFiles name="utils.hpp" path="/home/users/marco.venere/FPGA/FPGA/.settings/utils.hpp"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/home/users/marco.venere/FPGA/FPGA/.settings/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
