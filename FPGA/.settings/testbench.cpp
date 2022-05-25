@@ -82,7 +82,6 @@ int main(int argc, char *argv[]){
    
    for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
 	  ref[i] = static_cast<unsigned char>(rng_dist(rng));
-	  flt[i] = 0;
    }
 
 #ifdef CACHING
@@ -92,9 +91,9 @@ int main(int argc, char *argv[]){
    printf("Status %d\n", status);
 #endif
 
-  /* for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
+  for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
       flt[i] = static_cast<unsigned char>(rng_dist(rng));
-   }*/
+   }
 
 
    double j_h[J_HISTO_ROWS][J_HISTO_COLS];
