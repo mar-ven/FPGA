@@ -1,0 +1,42 @@
+2 arrays of random content:
+    seed = 1234
+    MI = 0.022476
+
+    seed = 98562
+    MI = 0.022357
+
+    seed = 0
+    MI = 0.022423
+
+    seed = time(NULL)
+    1. MI = 0.022427
+    2. MI = 0.022308
+    3. MI = 0.0222357
+    4. MI = 0.022541
+    5. MI = 0.022471
+
+2 arrays of the SAME random content:
+
+    seed = time(NULL)
+    1. MI = 7.999915
+    2. MI = 7.999922
+    3. MI = 7.999914
+    4. MI = 7.999916
+    5. MI = 7.999917
+    6. MI = 7.999913
+    7. MI = 7.999910
+
+ref array with random elements, flt with zeroes
+    seed = time(NULL)
+    1. MI = -0.000001
+    2. MI = -0.000000
+    3. MI = -0.000000
+    4. MI = -0.000001
+    5. MI =  0.000002
+    6. MI =  0.000003
+
+
+Mentre con due array di elementi randomici differenti la MI è sempre circa 0.02, con due array contenenti gli stessi elementi randomici l'Mi è sempre circa 7.9999.
+Dubbio: potrebbe essere dovuto allo scale factor?
+
+
