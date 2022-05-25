@@ -69,11 +69,11 @@ typedef unsigned char MY_PIXEL;
 */
 int main(int argc, char *argv[]){
 
-
+//vivado_hls FPGA/solution1/script.tcl 
    MY_PIXEL ref[N_COUPLES * DIMENSION * DIMENSION];
    MY_PIXEL flt[N_COUPLES * DIMENSION * DIMENSION];
 
-   int myseed = 1234;
+   int myseed = 77899;
 
    std::default_random_engine rng(myseed);
    std::uniform_int_distribution<int> rng_dist(0, MAX_RANGE);
@@ -81,9 +81,8 @@ int main(int argc, char *argv[]){
    data_t mihls_0, mihls_1, mihls_2;
    
    for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
-	   ref[i] = static_cast<unsigned char>(rng_dist(rng));
-	   flt[i] = 0;
-
+	  ref[i] = static_cast<unsigned char>(rng_dist(rng));
+	  flt[i] = 0;
    }
 
 #ifdef CACHING
@@ -95,8 +94,8 @@ int main(int argc, char *argv[]){
 
   /* for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
       flt[i] = static_cast<unsigned char>(rng_dist(rng));
-   }
-*/
+   }*/
+
 
    double j_h[J_HISTO_ROWS][J_HISTO_COLS];
    for(int i=0;i<J_HISTO_ROWS;i++){

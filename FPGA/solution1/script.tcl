@@ -4,6 +4,7 @@
 ## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project FPGA
+set_top mutual_information_master
 add_files FPGA/.settings/utils.hpp
 add_files FPGA/.settings/mutual_info.hpp
 add_files FPGA/.settings/mutual_info.cpp
