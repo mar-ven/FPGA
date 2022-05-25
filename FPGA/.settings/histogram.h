@@ -63,7 +63,8 @@ void joint_histogram(hls::stream<Tin> &ref_stream, hls::stream<Tin> &flt_stream,
 	}
 
 	j_h[slice][old_x][old_y] = acc;
-
+	/*if(end_reset)
+		memset(j_h[slice], 0, sizeof(j_h[slice]));*/
 	WRITE_OUT:for(int i = 0; i < J_HISTO_ROWS; i++){
 		for(int j = 0; j < J_HISTO_COLS; j+=ENTROPY_PE){
 #pragma HLS PIPELINE

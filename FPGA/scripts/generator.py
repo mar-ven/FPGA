@@ -106,6 +106,8 @@ typedef ap_uint<{0}> MY_PIXEL; \n \
 //2\n \
 #define UNPACK_DATA_BITWIDTH {0}\n \
 //0\n \
+#define N_COUPLES {14}\n \
+// 14\n \
 #define UNPACK_DATA_TYPE ap_uint<UNPACK_DATA_BITWIDTH>\n \
 \n \
 #define INPUT_DATA_BITWIDTH (HIST_PE*UNPACK_DATA_BITWIDTH)\n \
@@ -182,7 +184,7 @@ const unsigned int ENTROPY_PE_CONST = ENTROPY_PE;\n \
 /*****************/\n \
 const ENTROPY_TYPE scale_factor = {11}f;\n\
 //11 \n \
-//constexpr float scale_factor = 1.0f /(DIMENSION*DIMENSION);\n\
+//constexpr float scale_factor = 1.0f /(N_COUPLES * DIMENSION*DIMENSION);\n\
 \n \
 #ifndef CACHING\n \
     extern {12} void mutual_information_master(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info);\n \
@@ -205,7 +207,8 @@ const ENTROPY_TYPE scale_factor = {11}f;\n\
     derived.quant_levels, derived.maximum_freq,\
     derived.scale_factor,\
     vitis_externC,\
-    derived.entr_acc_size) )
+    derived.entr_acc_size, \
+    derived.n_couples) )
     if caching:
         mi_header.write(" \n \
 #define CACHING\n\
@@ -242,30 +245,31 @@ class ParametersDerived:
         self.scale_factor = 0
         self.pe_bits = 0
         self.uint_fixed_bitwidth=0
+        self.n_couples = 0
 
     def derive_bitwidth(self,data_container):
         return 32
 
 
-    def derive(self, in_dim, in_bits, bin_val, pe_number, entr_acc_size, histotype):
+    def derive(self, in_dim, in_bits, bin_val, pe_number, entr_acc_size, histotype, n_couples):
         self.in_dim = in_dim
         self.in_bits = in_bits
         self.bin_val = bin_val
         self.pe_number = pe_number
         self.entr_acc_size = entr_acc_size
-        self.histos_bits = math.ceil(numpy.log2(in_dim*in_dim))
+        self.n_couples = n_couples
+        self.histos_bits = math.ceil(numpy.log2(n_couples*in_dim*in_dim))
         self.reduced_lvls = math.ceil(in_bits - bin_val)
         self.quant_levels = math.ceil(2**self.reduced_lvls)
         self.hist_dim = math.ceil(2**self.reduced_lvls)
         self.j_idx_bits = math.ceil(numpy.log2(self.hist_dim*self.hist_dim))
         self.idx_bits = math.ceil(numpy.log2(self.hist_dim))
-        self.reduced_histos_bits = math.ceil(numpy.log2(in_dim*in_dim / pe_number))
+        self.reduced_histos_bits = math.ceil(numpy.log2(n_couples*in_dim*in_dim / pe_number))
         self.maximum_freq = math.ceil(2**in_bits)
         self.bit_entropy = self.derive_bitwidth(histotype)
-        self.scale_factor = 1 / (in_dim*in_dim)
+        self.scale_factor = 1 / (n_couples * in_dim * in_dim)
         self.pe_bits = math.ceil(numpy.log2(pe_number))
-        self.uint_fixed_bitwidth=math.ceil(math.log2(math.log2(in_dim*in_dim)*in_dim*in_dim))
-
+        self.uint_fixed_bitwidth=math.ceil(math.log2(math.log2(n_couples*in_dim*in_dim)*n_couples*in_dim*in_dim))
     
     def printDerived(self):
         print("Starting params:\n in_dim {0}\n in_bits {1}\n bin_val {2}\n pe_number {3}\n entr_acc_size {4}\n"\
@@ -306,9 +310,10 @@ def main():
     parser.add_argument("-vts", "--vitis", help='generate vitis version?', action='store_true')
     parser.add_argument("-mem", "--cache_mem", help='use the caching version or not', action='store_true')
     parser.add_argument("-uram", "--use_uram", help="using a caching version with urams, no sens to use without caching", action='store_true')
+    parser.add_argument("-nc", "--n_couples", help="sets the positive number of couples of ref and flt passed, default 1", default='1', type=int)
     args = parser.parse_args()
     derived = ParametersDerived()
-    derived.derive(args.in_dim, args.in_bits, args.bin_val, args.pe_number, args.entr_acc_size, args.histotype)
+    derived.derive(args.in_dim, args.in_bits, args.bin_val, args.pe_number, args.entr_acc_size, args.histotype, args.n_couples)
     #derived.printDerived()
     #print(args)
     #print(args.clean)

@@ -42,7 +42,7 @@ const unsigned int pe_j_h_partition = HIST_PE;
 
 typedef MinHistBits_t HIST_TYPE;
 typedef MinHistPEBits_t HIST_PE_TYPE;
-#define N_COUPLES 8
+
 
 typedef enum FUNCTION_T {
 	LOAD_IMG = 0,

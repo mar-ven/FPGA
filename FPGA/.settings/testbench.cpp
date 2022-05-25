@@ -34,7 +34,7 @@
 #include "mutual_info.hpp"
 
 
-#define N_COUPLES 8
+
 /*
 #include "ap_int.h"
 
@@ -81,7 +81,9 @@ int main(int argc, char *argv[]){
    data_t mihls_0, mihls_1, mihls_2;
    
    for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
-      ref[i] = static_cast<unsigned char>(rng_dist(rng));
+	   ref[i] = static_cast<unsigned char>(rng_dist(rng));
+	   flt[i] = 0;
+
    }
 
 #ifdef CACHING
@@ -91,10 +93,10 @@ int main(int argc, char *argv[]){
    printf("Status %d\n", status);
 #endif
 
-   for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
+  /* for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
       flt[i] = static_cast<unsigned char>(rng_dist(rng));
    }
-
+*/
 
    double j_h[J_HISTO_ROWS][J_HISTO_COLS];
    for(int i=0;i<J_HISTO_ROWS;i++){
@@ -115,11 +117,11 @@ int main(int argc, char *argv[]){
 
    for (int i=0; i<J_HISTO_ROWS; i++) {
       for (int j=0; j<J_HISTO_COLS; j++) {
-         j_h[i][j] = j_h[i][j]/(1.0*DIMENSION*DIMENSION);
+         j_h[i][j] = j_h[i][j]/(N_COUPLES*DIMENSION*DIMENSION);
       }
    }
 
-   printf("Histogram computed");
+
    float entropy = 0.0;
    for (int i=0; i<J_HISTO_ROWS; i++) {
       for (int j=0; j<J_HISTO_COLS; j++) {
