@@ -82,15 +82,36 @@
  #define J_HISTO_ROWS 256
  //3
  #define J_HISTO_COLS J_HISTO_ROWS
- #define MIN_HIST_BITS 21
+ #define MIN_HIST_BITS 22
  //4
- //#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(MYROWS*MYCOLS)))
- // TODO overflow non contemplato :D, sarebbe + 1
- #define MIN_HIST_PE_BITS (MIN_HIST_BITS - 0)
- //5
- //#define MIN_HISTO_PE_BITS (int)(std::ceil(std::log2(ROW_PE_KRNL*COLS_PE_KRNL)))
- //MIN_HIST_BITS - log2(HIST_PE)
+ #define MIN_HIST_BITS_NO_OVERFLOW MIN_HIST_BITS - 1
+//#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(N_COUPLES * MYROWS * MYCOLS)))
+ //
+ #if HIST_PE == 1
+ 	#define MIN_HIST_PE_BITS (MIN_HIST_BITS)
+ #endif
  
+ #if HIST_PE == 2
+ 	#define MIN_HIST_PE_BITS (MIN_HIST_BITS - 1)
+#endif
+
+ #if HIST_PE == 4
+	#define MIN_HIST_PE_BITS (MIN_HIST_BITS - 2)
+#endif
+
+ #if HIST_PE == 8
+	#define MIN_HIST_PE_BITS (MIN_HIST_BITS - 3)
+#endif
+
+ #if HIST_PE == 16
+	#define MIN_HIST_PE_BITS (MIN_HIST_BITS - 4)
+#endif
+
+ #if HIST_PE == 32
+	#define MIN_HIST_PE_BITS (MIN_HIST_BITS - 5)
+#endif
+//MIN_HIST_PE_BITS=std::ceil(std::log2(ROW_PE_KRNL*COLS_PE_KRNL)))
+
  
  typedef ap_uint<MIN_HIST_BITS> MinHistBits_t;
  typedef ap_uint<MIN_HIST_PE_BITS> MinHistPEBits_t;
@@ -111,7 +132,7 @@
  
  #define UINT_OUT_ENTROPY_TYPE_BITWIDTH 26
  //7
- // MAX std::ceil(std::log2( log2(MYROWS*MYCOLS) * (MYROWS*MYCOLS) )) + 1
+ // MAX std::ceil(std::log2( log2(N_COUPLES*MYROWS*MYCOLS) * (N_COUPLES*MYROWS*MYCOLS) )) + 1
  #define UINT_OUT_ENTROPY_TYPE ap_uint<UINT_OUT_ENTROPY_TYPE_BITWIDTH>
  
  #define FIXED_BITWIDTH 42
@@ -133,8 +154,7 @@
  //UNIFORM QUANTIZATION
  #define INTERVAL_NUMBER 256 // L, amount of levels we want for the binning process, thus at the output
  //9
- #define MAX_FREQUENCY 256 // or 255? the maximum number of levels at the input stage
- //10
+ #define MAX_FREQUENCY J_HISTO_ROWS // the maximum number of levels at the input stage//
 #define MINIMUM_FREQUENCY 0
  #define INTERVAL_LENGTH ( (MAX_FREQUENCY - MINIMUM_FREQUENCY) / INTERVAL_NUMBER ) // Q = (fmax - fmin )/L
  #define INDEX_QUANTIZED(i) (i/INTERVAL_LENGTH) // Qy(i) =  f - fmin / Q

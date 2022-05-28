@@ -1730,3 +1730,1027 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input
 Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FPGA/.settings/mutual_info.cpp' ... 
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:69:33
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:71:33
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:74:44
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:98:31
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:100:31
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:102:31
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:105:28
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:107:28
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:109:28
+WARNING: [HLS 200-471] Dataflow form checks found 9 issue(s) in file FPGA/.settings/mutual_info.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 1068.020 ; gain = 543.992 ; free physical = 31728 ; free virtual = 301454
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 1068.020 ; gain = 543.992 ; free physical = 31728 ; free virtual = 301454
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'wrapper_joint_histogram_1<ap_uint<8>, 262144u, ap_uint<21>, ap_uint<21>, 21u>' into 'compute' (FPGA/.settings/mutual_info.cpp:131).
+INFO: [XFORM 203-603] Inlining function 'wrapper_entropy_1<ap_uint<21>, ap_uint<21>, float, 65536u>' into 'compute' (FPGA/.settings/mutual_info.cpp:145).
+INFO: [XFORM 203-603] Inlining function 'wrapper_entropy_1<ap_uint<21>, ap_uint<21>, float, 256u>' into 'compute' (FPGA/.settings/mutual_info.cpp:147).
+INFO: [XFORM 203-603] Inlining function 'wrapper_entropy_1<ap_uint<21>, ap_uint<21>, float, 256u>' into 'compute' (FPGA/.settings/mutual_info.cpp:146).
+INFO: [XFORM 203-603] Inlining function 'compute' into 'mutual_information_master' (FPGA/.settings/mutual_info.cpp:190).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:12 ; elapsed = 00:01:18 . Memory (MB): peak = 1071.152 ; gain = 547.125 ; free physical = 31652 ; free virtual = 301391
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'log_reduce::log' into 'hls::log' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/logfloat.cpp:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::log' into 'compute_entropy<ap_uint<21>, float, 65536u>' (FPGA/.settings/entropy.h:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::log' into 'compute_entropy<ap_uint<21>, float, 256u>' (FPGA/.settings/entropy.h:61) automatically.
+WARNING: [SYNCHK 200-23] FPGA/.settings/histogram.h:97: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:06:00 ; elapsed = 00:06:06 . Memory (MB): peak = 1085.305 ; gain = 561.277 ; free physical = 31573 ; free virtual = 301314
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (FPGA/.settings/entropy.h:94) in function 'hist_row<ap_uint<21>, 256u, 256u, ap_uint<21>, ap_uint<21>, 21u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (FPGA/.settings/entropy.h:112) in function 'hist_row<ap_uint<21>, 256u, 256u, ap_uint<21>, ap_uint<21>, 21u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (FPGA/.settings/histogram.h:91) in function 'sum_joint_histogram<ap_uint<21>, 65536u, ap_uint<21>, 1u, ap_uint<21>, 21u, ap_uint<21>, 21u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1' (FPGA/.settings/histogram.h:69) in function 'joint_histogram<ap_uint<8>, 262144u, 0u, ap_uint<21>, ap_uint<21>, 21u>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (FPGA/.settings/entropy.h:98) in function 'hist_row<ap_uint<21>, 256u, 256u, ap_uint<21>, ap_uint<21>, 21u>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (FPGA/.settings/entropy.h:115) in function 'hist_row<ap_uint<21>, 256u, 256u, ap_uint<21>, ap_uint<21>, 21u>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (FPGA/.settings/entropy.h:73) in function 'compute_entropy<ap_uint<21>, float, 65536u>' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (FPGA/.settings/entropy.h:73) in function 'compute_entropy<ap_uint<21>, float, 256u>' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (FPGA/.settings/histogram.h:96) in function 'sum_joint_histogram<ap_uint<21>, 65536u, ap_uint<21>, 1u, ap_uint<21>, 21u, ap_uint<21>, 21u>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2' (FPGA/.settings/histogram.h:101) in function 'sum_joint_histogram<ap_uint<21>, 65536u, ap_uint<21>, 1u, ap_uint<21>, 21u, ap_uint<21>, 21u>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (FPGA/.settings/histogram.h:72) in function 'joint_histogram<ap_uint<8>, 262144u, 0u, ap_uint<21>, ap_uint<21>, 21u>' completely with a factor of 1.
+WARNING: [XFORM 203-105] Cannot partition array 'acc_array.V.1' : incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'j_h.V' : incorrect partition factor 1.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'ref_pe_stream.V.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'j_h_pe_stream.V.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'flt_pe_stream.V.V' .
+INFO: [XFORM 203-101] Partitioning array 'tmp.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'j_h.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref_pe_stream.V.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'j_h_pe_stream.V.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'flt_pe_stream.V.V' in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'log_reduce::log' into 'hls::log' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/logfloat.cpp:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::log' into 'compute_entropy<ap_uint<21>, float, 65536u>' (FPGA/.settings/entropy.h:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::log' into 'compute_entropy<ap_uint<21>, float, 256u>' (FPGA/.settings/entropy.h:61) automatically.
+INFO: [XFORM 203-721] Extract dataflow region from loop  (FPGA/.settings/mutual_info.cpp:189)  of function 'mutual_information_master'.
+INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop', detected/extracted 15 process function(s): 
+	 'dataflow_in_loop.entry171'
+	 'axi2stream<ap_uint<8>, 262144u>168'
+	 'axi2stream<ap_uint<8>, 262144u>'
+	 'split_stream<ap_uint<8>, ap_uint<8>, 8u, 262144u, 1u>'
+	 'split_stream<ap_uint<8>, ap_uint<8>, 8u, 262144u, 1u>'
+	 'joint_histogram<ap_uint<8>, 262144u, 0u, ap_uint<21>, ap_uint<21>, 21u>'
+	 'sum_joint_histogram<ap_uint<21>, 65536u, ap_uint<21>, 1u, ap_uint<21>, 21u, ap_uint<21>, 21u>'
+	 'tri_stream<ap_uint<21>, 65536u>'
+	 'hist_row<ap_uint<21>, 256u, 256u, ap_uint<21>, ap_uint<21>, 21u>'
+	 'hist_col<ap_uint<21>, 256u, 256u>'
+	 'compute_entropy<ap_uint<21>, float, 65536u>'
+	 'compute_entropy<ap_uint<21>, float, 256u>'
+	 'compute_entropy<ap_uint<21>, float, 256u>'
+	 'compute_mutual_information<float, float>'
+	 'stream2axi<float, 1u>'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (FPGA/.settings/entropy.h:131:33) to (FPGA/.settings/entropy.h:131:28) in function 'hist_col<ap_uint<21>, 256u, 256u>'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:06:38 ; elapsed = 00:06:45 . Memory (MB): peak = 1213.148 ; gain = 689.121 ; free physical = 31509 ; free virtual = 301255
+INFO: [XFORM 203-541] Flattening a loop nest 'WRITE_OUT' (FPGA/.settings/histogram.h:68:41) in function 'joint_histogram<ap_uint<8>, 262144u, 0u, ap_uint<21>, ap_uint<21>, 21u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (FPGA/.settings/entropy.h:93:15) in function 'hist_row<ap_uint<21>, 256u, 256u, ap_uint<21>, ap_uint<21>, 21u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (FPGA/.settings/entropy.h:130:15) in function 'hist_col<ap_uint<21>, 256u, 256u>'.
+WARNING: [XFORM 203-631] Renaming function 'tri_stream<ap_uint<21>, 65536u>' to 'tri_stream' (FPGA/.settings/utils.hpp:95:29)
+WARNING: [XFORM 203-631] Renaming function 'sum_joint_histogram<ap_uint<21>, 65536u, ap_uint<21>, 1u, ap_uint<21>, 21u, ap_uint<21>, 21u>' to 'sum_joint_histogram' (FPGA/.settings/histogram.h:91:26)
+WARNING: [XFORM 203-631] Renaming function 'stream2axi<float, 1u>' to 'stream2axi' (FPGA/.settings/utils.hpp:106:5)
+WARNING: [XFORM 203-631] Renaming function 'split_stream<ap_uint<8>, ap_uint<8>, 8u, 262144u, 1u>' to 'split_stream' (FPGA/.settings/utils.hpp:69:29)
+WARNING: [XFORM 203-631] Renaming function 'joint_histogram<ap_uint<8>, 262144u, 0u, ap_uint<21>, ap_uint<21>, 21u>' to 'joint_histogram' (FPGA/.settings/histogram.h:49:25)
+WARNING: [XFORM 203-631] Renaming function 'hist_row<ap_uint<21>, 256u, 256u, ap_uint<21>, ap_uint<21>, 21u>' to 'hist_row' (FPGA/.settings/entropy.h:93:20)
+WARNING: [XFORM 203-631] Renaming function 'hist_col<ap_uint<21>, 256u, 256u>' to 'hist_col' (FPGA/.settings/entropy.h:130:27)
+WARNING: [XFORM 203-631] Renaming function 'dataflow_in_loop.entry171' to 'dataflow_in_loop.ent' (FPGA/.settings/mutual_info.cpp:62:1)
+WARNING: [XFORM 203-631] Renaming function 'compute_mutual_information<float, float>' to 'compute_mutual_infor' (FPGA/.settings/entropy.h:154:2)
+WARNING: [XFORM 203-631] Renaming function 'compute_entropy<ap_uint<21>, float, 65536u>' to 'compute_entropy' (FPGA/.settings/entropy.h:9:26)
+WARNING: [XFORM 203-631] Renaming function 'compute_entropy<ap_uint<21>, float, 256u>' to 'compute_entropy.1' (FPGA/.settings/entropy.h:9:26)
+WARNING: [XFORM 203-631] Renaming function 'axi2stream<ap_uint<8>, 262144u>168' to 'axi2stream168' (FPGA/.settings/utils.hpp:37:29)
+WARNING: [XFORM 203-631] Renaming function 'axi2stream<ap_uint<8>, 262144u>' to 'axi2stream' (FPGA/.settings/utils.hpp:37:29)
+WARNING: [ANALYSIS 214-52] Found false 'RAW' intra dependency for variable 'j_h.V.0'.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 262144 on port 'in.V' (FPGA/.settings/utils.hpp:39:15). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 262144 on port 'input_img.V' (FPGA/.settings/utils.hpp:39:15). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'j_h.V.0' (FPGA/.settings/histogram.h:58:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'j_h.V.0' (FPGA/.settings/histogram.h:65:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'j_h.V.0' (FPGA/.settings/histogram.h:75:6)
+INFO: [HLS 200-472] Inferring partial write operation for 'acc_array.V.1' (FPGA/.settings/entropy.h:107:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'acc_array.V' (FPGA/.settings/entropy.h:135:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmp_entropy' (FPGA/.settings/entropy.h:50:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmp_entropy' (FPGA/.settings/entropy.h:63:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmp_entropy' (FPGA/.settings/entropy.h:50:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmp_entropy' (FPGA/.settings/entropy.h:63:4)
+WARNING: [XFORM 203-631] Renaming function 'dataflow_in_loop.entry9' to 'dataflow_in_loop.ent.1' 
+WARNING: [XFORM 203-631] Renaming function 'dataflow_in_loop.ent' to 'dataflow_in_loop.ent.1.1' (FPGA/.settings/mutual_info.cpp:62:2)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:06:43 ; elapsed = 00:06:49 . Memory (MB): peak = 1340.023 ; gain = 815.996 ; free physical = 31375 ; free virtual = 301123
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mutual_information_master' ...
+WARNING: [SYN 201-103] Legalizing function name 'dataflow_in_loop.ent.1' to 'dataflow_in_loop_ent_1'.
+WARNING: [SYN 201-103] Legalizing function name 'dataflow_in_loop.ent.1.1' to 'dataflow_in_loop_ent_1_1'.
+WARNING: [SYN 201-103] Legalizing function name 'compute_entropy.1' to 'compute_entropy_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_ent_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 409.59 seconds; current allocated memory: 416.090 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 416.192 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_ent_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 416.251 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 416.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axi2stream168' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 416.470 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 416.648 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axi2stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 416.764 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 416.960 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'split_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 417.026 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 417.115 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_histogram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'HIST'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'WRITE_OUT_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 417.364 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 417.694 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sum_joint_histogram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 417.804 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 417.894 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tri_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 417.994 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 418.106 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hist_row' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 418.273 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 418.493 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hist_col' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 418.634 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 418.838 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_entropy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 25.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 419.269 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 419.900 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_entropy_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 25.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.67 seconds; current allocated memory: 420.451 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 421.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_mutual_infor' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 421.287 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 421.401 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'stream2axi'.
+WARNING: [SCHED 204-63] Unable to schedule bus write on port 'mutual_info' (FPGA/.settings/utils.hpp:110->FPGA/.settings/mutual_info.cpp:157->FPGA/.settings/mutual_info.cpp:190->FPGA/.settings/mutual_info.cpp:157->FPGA/.settings/mutual_info.cpp:190) within the last cycle (II = 1).
+Please consider increasing the initiation interval of the pipeline.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 421.475 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 421.585 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 421.823 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.78 seconds; current allocated memory: 422.467 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mutual_information_master' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 422.650 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 422.971 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_ent_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_ent_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 423.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_ent_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_ent_1_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 423.644 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axi2stream168' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axi2stream168'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 424.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axi2stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axi2stream'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 425.161 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'split_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'split_stream'.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 425.878 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_histogram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'joint_histogram_j_h_V_0' to 'joint_histogram_jbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_histogram'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 426.849 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sum_joint_histogram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sum_joint_histogram'.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 428.302 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tri_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tri_stream'.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 428.823 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hist_row' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'hist_row_acc_array_V_1' to 'hist_row_acc_arracud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hist_row'.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 429.619 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hist_col' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'hist_col_acc_array_V' to 'hist_col_acc_arradEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hist_col'.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 430.864 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_entropy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'compute_entropy_tmp_entropy' to 'compute_entropy_teOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_fadd_32ns_32ns_32_4_full_dsp_1' to 'mutual_informatiofYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_fmul_32ns_32ns_32_2_max_dsp_1' to 'mutual_informatiog8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_fdiv_32ns_32ns_32_8_1' to 'mutual_informatiohbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_uitofp_32ns_32_3_1' to 'mutual_informatioibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_flog_32ns_32ns_32_6_full_dsp_1' to 'mutual_informatiojbC' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiofYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiog8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiohbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatioibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiojbC': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_entropy'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 433.127 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_entropy_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'compute_entropy_1_tmp_entropy' to 'compute_entropy_1kbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiofYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiog8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiohbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatioibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiojbC': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_entropy_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 436.144 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_mutual_infor' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_faddfsub_32ns_32ns_32_4_full_dsp_1' to 'mutual_informatiolbW' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiog8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiolbW': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_mutual_infor'.
+INFO: [HLS 200-111]  Elapsed time: 0.54 seconds; current allocated memory: 438.077 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2axi'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 438.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'start_for_dataflow_in_loop_ent_1_1_U0' to 'start_for_dataflomb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_stream2axi_U0' to 'start_for_stream2ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_split_stream_U1_1' to 'start_for_split_socq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_split_stream_U0' to 'start_for_split_spcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_joint_histogram_U0' to 'start_for_joint_hqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_sum_joint_histogram_U0' to 'start_for_sum_joircU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_tri_stream_U0' to 'start_for_tri_strsc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_hist_row_U0' to 'start_for_hist_rotde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_hist_col_U0' to 'start_for_hist_coudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_compute_entropy_U0' to 'start_for_computevdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_compute_entropy_1_U0' to 'start_for_computewdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_compute_entropy_1_U1_1' to 'start_for_computexdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_compute_mutual_infor_U0' to 'start_for_computeyd2' due to the length limit 20
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_WID' to 0.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FPGA/.settings/mutual_info.cpp' ... 
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:69:33
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:71:33
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:74:43
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:98:31
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:100:31
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:102:31
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:105:28
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:107:28
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: FPGA/.settings/mutual_info.cpp:109:28
+WARNING: [HLS 200-471] Dataflow form checks found 9 issue(s) in file FPGA/.settings/mutual_info.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 1068.020 ; gain = 543.992 ; free physical = 26222 ; free virtual = 297156
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 1068.020 ; gain = 543.992 ; free physical = 26222 ; free virtual = 297156
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'wrapper_joint_histogram_1<ap_uint<8>, 64u, ap_uint<9>, ap_uint<9>, 9u>' into 'compute' (FPGA/.settings/mutual_info.cpp:131).
+INFO: [XFORM 203-603] Inlining function 'wrapper_entropy_1<ap_uint<9>, ap_uint<9>, float, 65536u>' into 'compute' (FPGA/.settings/mutual_info.cpp:145).
+INFO: [XFORM 203-603] Inlining function 'wrapper_entropy_1<ap_uint<9>, ap_uint<9>, float, 256u>' into 'compute' (FPGA/.settings/mutual_info.cpp:147).
+INFO: [XFORM 203-603] Inlining function 'wrapper_entropy_1<ap_uint<9>, ap_uint<9>, float, 256u>' into 'compute' (FPGA/.settings/mutual_info.cpp:146).
+INFO: [XFORM 203-603] Inlining function 'compute' into 'mutual_information_master' (FPGA/.settings/mutual_info.cpp:190).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:12 ; elapsed = 00:01:17 . Memory (MB): peak = 1071.137 ; gain = 547.109 ; free physical = 26151 ; free virtual = 297097
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'log_reduce::log' into 'hls::log' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/logfloat.cpp:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::log' into 'compute_entropy<ap_uint<9>, float, 65536u>' (FPGA/.settings/entropy.h:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::log' into 'compute_entropy<ap_uint<9>, float, 256u>' (FPGA/.settings/entropy.h:61) automatically.
+WARNING: [SYNCHK 200-23] FPGA/.settings/histogram.h:97: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:02:33 ; elapsed = 00:02:39 . Memory (MB): peak = 1071.137 ; gain = 547.109 ; free physical = 26121 ; free virtual = 297073
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (FPGA/.settings/entropy.h:94) in function 'hist_row<ap_uint<9>, 256u, 256u, ap_uint<9>, ap_uint<9>, 9u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (FPGA/.settings/entropy.h:112) in function 'hist_row<ap_uint<9>, 256u, 256u, ap_uint<9>, ap_uint<9>, 9u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (FPGA/.settings/histogram.h:91) in function 'sum_joint_histogram<ap_uint<9>, 65536u, ap_uint<9>, 1u, ap_uint<9>, 9u, ap_uint<9>, 9u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1' (FPGA/.settings/histogram.h:69) in function 'joint_histogram<ap_uint<8>, 64u, 0u, ap_uint<9>, ap_uint<9>, 9u>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (FPGA/.settings/entropy.h:98) in function 'hist_row<ap_uint<9>, 256u, 256u, ap_uint<9>, ap_uint<9>, 9u>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (FPGA/.settings/entropy.h:115) in function 'hist_row<ap_uint<9>, 256u, 256u, ap_uint<9>, ap_uint<9>, 9u>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (FPGA/.settings/entropy.h:73) in function 'compute_entropy<ap_uint<9>, float, 65536u>' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (FPGA/.settings/entropy.h:73) in function 'compute_entropy<ap_uint<9>, float, 256u>' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (FPGA/.settings/histogram.h:96) in function 'sum_joint_histogram<ap_uint<9>, 65536u, ap_uint<9>, 1u, ap_uint<9>, 9u, ap_uint<9>, 9u>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2' (FPGA/.settings/histogram.h:101) in function 'sum_joint_histogram<ap_uint<9>, 65536u, ap_uint<9>, 1u, ap_uint<9>, 9u, ap_uint<9>, 9u>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (FPGA/.settings/histogram.h:72) in function 'joint_histogram<ap_uint<8>, 64u, 0u, ap_uint<9>, ap_uint<9>, 9u>' completely with a factor of 1.
+WARNING: [XFORM 203-105] Cannot partition array 'acc_array.V.1' : incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'j_h.V' : incorrect partition factor 1.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'ref_pe_stream.V.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'j_h_pe_stream.V.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'flt_pe_stream.V.V' .
+INFO: [XFORM 203-101] Partitioning array 'tmp.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'j_h.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref_pe_stream.V.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'j_h_pe_stream.V.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'flt_pe_stream.V.V' in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'log_reduce::log' into 'hls::log' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/logfloat.cpp:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::log' into 'compute_entropy<ap_uint<9>, float, 65536u>' (FPGA/.settings/entropy.h:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::log' into 'compute_entropy<ap_uint<9>, float, 256u>' (FPGA/.settings/entropy.h:61) automatically.
+INFO: [XFORM 203-721] Extract dataflow region from loop  (FPGA/.settings/mutual_info.cpp:189)  of function 'mutual_information_master'.
+INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop', detected/extracted 15 process function(s): 
+	 'dataflow_in_loop.entry171'
+	 'axi2stream<ap_uint<8>, 64u>168'
+	 'axi2stream<ap_uint<8>, 64u>'
+	 'split_stream<ap_uint<8>, ap_uint<8>, 8u, 64u, 1u>'
+	 'split_stream<ap_uint<8>, ap_uint<8>, 8u, 64u, 1u>'
+	 'joint_histogram<ap_uint<8>, 64u, 0u, ap_uint<9>, ap_uint<9>, 9u>'
+	 'sum_joint_histogram<ap_uint<9>, 65536u, ap_uint<9>, 1u, ap_uint<9>, 9u, ap_uint<9>, 9u>'
+	 'tri_stream<ap_uint<9>, 65536u>'
+	 'hist_row<ap_uint<9>, 256u, 256u, ap_uint<9>, ap_uint<9>, 9u>'
+	 'hist_col<ap_uint<9>, 256u, 256u>'
+	 'compute_entropy<ap_uint<9>, float, 65536u>'
+	 'compute_entropy<ap_uint<9>, float, 256u>'
+	 'compute_entropy<ap_uint<9>, float, 256u>'
+	 'compute_mutual_information<float, float>'
+	 'stream2axi<float, 1u>'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (FPGA/.settings/entropy.h:131:33) to (FPGA/.settings/entropy.h:131:28) in function 'hist_col<ap_uint<9>, 256u, 256u>'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:02:44 ; elapsed = 00:02:50 . Memory (MB): peak = 1196.020 ; gain = 671.992 ; free physical = 26067 ; free virtual = 297028
+INFO: [XFORM 203-541] Flattening a loop nest 'WRITE_OUT' (FPGA/.settings/histogram.h:68:41) in function 'joint_histogram<ap_uint<8>, 64u, 0u, ap_uint<9>, ap_uint<9>, 9u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (FPGA/.settings/entropy.h:93:15) in function 'hist_row<ap_uint<9>, 256u, 256u, ap_uint<9>, ap_uint<9>, 9u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (FPGA/.settings/entropy.h:130:15) in function 'hist_col<ap_uint<9>, 256u, 256u>'.
+WARNING: [XFORM 203-631] Renaming function 'tri_stream<ap_uint<9>, 65536u>' to 'tri_stream' (FPGA/.settings/utils.hpp:95:29)
+WARNING: [XFORM 203-631] Renaming function 'sum_joint_histogram<ap_uint<9>, 65536u, ap_uint<9>, 1u, ap_uint<9>, 9u, ap_uint<9>, 9u>' to 'sum_joint_histogram' (FPGA/.settings/histogram.h:91:26)
+WARNING: [XFORM 203-631] Renaming function 'stream2axi<float, 1u>' to 'stream2axi' (FPGA/.settings/utils.hpp:106:5)
+WARNING: [XFORM 203-631] Renaming function 'split_stream<ap_uint<8>, ap_uint<8>, 8u, 64u, 1u>' to 'split_stream' (FPGA/.settings/utils.hpp:69:29)
+WARNING: [XFORM 203-631] Renaming function 'joint_histogram<ap_uint<8>, 64u, 0u, ap_uint<9>, ap_uint<9>, 9u>' to 'joint_histogram' (FPGA/.settings/histogram.h:49:25)
+WARNING: [XFORM 203-631] Renaming function 'hist_row<ap_uint<9>, 256u, 256u, ap_uint<9>, ap_uint<9>, 9u>' to 'hist_row' (FPGA/.settings/entropy.h:93:20)
+WARNING: [XFORM 203-631] Renaming function 'hist_col<ap_uint<9>, 256u, 256u>' to 'hist_col' (FPGA/.settings/entropy.h:130:27)
+WARNING: [XFORM 203-631] Renaming function 'dataflow_in_loop.entry171' to 'dataflow_in_loop.ent' (FPGA/.settings/mutual_info.cpp:62:1)
+WARNING: [XFORM 203-631] Renaming function 'compute_mutual_information<float, float>' to 'compute_mutual_infor' (FPGA/.settings/entropy.h:154:2)
+WARNING: [XFORM 203-631] Renaming function 'compute_entropy<ap_uint<9>, float, 65536u>' to 'compute_entropy' (FPGA/.settings/entropy.h:9:26)
+WARNING: [XFORM 203-631] Renaming function 'compute_entropy<ap_uint<9>, float, 256u>' to 'compute_entropy.1' (FPGA/.settings/entropy.h:9:26)
+WARNING: [XFORM 203-631] Renaming function 'axi2stream<ap_uint<8>, 64u>168' to 'axi2stream168' (FPGA/.settings/utils.hpp:37:29)
+WARNING: [XFORM 203-631] Renaming function 'axi2stream<ap_uint<8>, 64u>' to 'axi2stream' (FPGA/.settings/utils.hpp:37:29)
+WARNING: [ANALYSIS 214-52] Found false 'RAW' intra dependency for variable 'j_h.V.0'.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 64 on port 'in.V' (FPGA/.settings/utils.hpp:39:15). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 64 on port 'input_img.V' (FPGA/.settings/utils.hpp:39:15). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'j_h.V.0' (FPGA/.settings/histogram.h:58:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'j_h.V.0' (FPGA/.settings/histogram.h:65:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'j_h.V.0' (FPGA/.settings/histogram.h:75:6)
+INFO: [HLS 200-472] Inferring partial write operation for 'acc_array.V.1' (FPGA/.settings/entropy.h:107:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'acc_array.V' (FPGA/.settings/entropy.h:135:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmp_entropy' (FPGA/.settings/entropy.h:50:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmp_entropy' (FPGA/.settings/entropy.h:63:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmp_entropy' (FPGA/.settings/entropy.h:50:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmp_entropy' (FPGA/.settings/entropy.h:63:4)
+WARNING: [XFORM 203-631] Renaming function 'dataflow_in_loop.entry9' to 'dataflow_in_loop.ent.1' 
+WARNING: [XFORM 203-631] Renaming function 'dataflow_in_loop.ent' to 'dataflow_in_loop.ent.1.1' (FPGA/.settings/mutual_info.cpp:62:2)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:47 ; elapsed = 00:02:53 . Memory (MB): peak = 1324.020 ; gain = 799.992 ; free physical = 25917 ; free virtual = 296878
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mutual_information_master' ...
+WARNING: [SYN 201-103] Legalizing function name 'dataflow_in_loop.ent.1' to 'dataflow_in_loop_ent_1'.
+WARNING: [SYN 201-103] Legalizing function name 'dataflow_in_loop.ent.1.1' to 'dataflow_in_loop_ent_1_1'.
+WARNING: [SYN 201-103] Legalizing function name 'compute_entropy.1' to 'compute_entropy_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_ent_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 173.45 seconds; current allocated memory: 407.271 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 407.374 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_ent_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 407.433 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 407.512 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axi2stream168' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 407.655 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 407.835 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axi2stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 407.951 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 408.149 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'split_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 408.214 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 408.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_histogram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'HIST'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'WRITE_OUT_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 408.553 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 408.884 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sum_joint_histogram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 408.993 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 409.084 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tri_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 409.184 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 409.297 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hist_row' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 409.463 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 409.681 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hist_col' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 409.823 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 410.026 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_entropy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 25.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 410.457 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.47 seconds; current allocated memory: 411.088 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_entropy_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 25.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 411.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 412.318 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_mutual_infor' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 412.474 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 412.588 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'stream2axi'.
+WARNING: [SCHED 204-63] Unable to schedule bus write on port 'mutual_info' (FPGA/.settings/utils.hpp:110->FPGA/.settings/mutual_info.cpp:157->FPGA/.settings/mutual_info.cpp:190->FPGA/.settings/mutual_info.cpp:157->FPGA/.settings/mutual_info.cpp:190) within the last cycle (II = 1).
+Please consider increasing the initiation interval of the pipeline.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 412.661 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 412.771 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 413.009 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.69 seconds; current allocated memory: 413.654 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mutual_information_master' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 413.836 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 414.157 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_ent_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_ent_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 414.491 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_ent_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_ent_1_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 414.830 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axi2stream168' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axi2stream168'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 415.464 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axi2stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axi2stream'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 416.348 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'split_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'split_stream'.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 417.064 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_histogram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'joint_histogram_j_h_V_0' to 'joint_histogram_jbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_histogram'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 418.034 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sum_joint_histogram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sum_joint_histogram'.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 419.455 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tri_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tri_stream'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 420.005 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hist_row' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'hist_row_acc_array_V_1' to 'hist_row_acc_arracud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hist_row'.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 420.802 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hist_col' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'hist_col_acc_array_V' to 'hist_col_acc_arradEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hist_col'.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 422.046 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_entropy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'compute_entropy_tmp_entropy' to 'compute_entropy_teOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_fadd_32ns_32ns_32_4_full_dsp_1' to 'mutual_informatiofYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_fmul_32ns_32ns_32_2_max_dsp_1' to 'mutual_informatiog8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_fdiv_32ns_32ns_32_8_1' to 'mutual_informatiohbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_uitofp_32ns_32_3_1' to 'mutual_informatioibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_flog_32ns_32ns_32_6_full_dsp_1' to 'mutual_informatiojbC' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiofYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiog8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiohbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatioibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiojbC': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_entropy'.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 424.310 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_entropy_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'compute_entropy_1_tmp_entropy' to 'compute_entropy_1kbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiofYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiog8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiohbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatioibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiojbC': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_entropy_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.6 seconds; current allocated memory: 427.342 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_mutual_infor' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'mutual_information_master_faddfsub_32ns_32ns_32_4_full_dsp_1' to 'mutual_informatiolbW' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiog8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mutual_informatiolbW': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_mutual_infor'.
+INFO: [HLS 200-111]  Elapsed time: 0.53 seconds; current allocated memory: 429.259 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2axi'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 429.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'start_for_dataflow_in_loop_ent_1_1_U0' to 'start_for_dataflomb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_stream2axi_U0' to 'start_for_stream2ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_split_stream_U1_1' to 'start_for_split_socq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_split_stream_U0' to 'start_for_split_spcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_joint_histogram_U0' to 'start_for_joint_hqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_sum_joint_histogram_U0' to 'start_for_sum_joircU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_tri_stream_U0' to 'start_for_tri_strsc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_hist_row_U0' to 'start_for_hist_rotde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_hist_col_U0' to 'start_for_hist_coudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_compute_entropy_U0' to 'start_for_computevdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_compute_entropy_1_U0' to 'start_for_computewdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_compute_entropy_1_U1_1' to 'start_for_computexdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_compute_mutual_infor_U0' to 'start_for_computeyd2' due to the length limit 20
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_img_V_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop/m_axi_input_ref_V_WID' to 0.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

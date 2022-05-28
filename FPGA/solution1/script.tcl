@@ -14,8 +14,9 @@ add_files -tb FPGA/.settings/testbench.cpp -cflags "-Wno-unknown-pragmas" -csimf
 open_solution "solution1"
 set_part {xczu7ev-ffvc1156-2-e}
 create_clock -period 10 -name default
+config_export -format ip_catalog -rtl verilog
 #source "./FPGA/solution1/directives.tcl"
 csim_design -clean
 csynth_design
 cosim_design
-export_design -format ip_catalog
+export_design -rtl verilog -format ip_catalog

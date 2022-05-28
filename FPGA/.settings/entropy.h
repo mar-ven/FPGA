@@ -160,7 +160,7 @@ void compute_mutual_information(hls::stream<Tin>& in0, hls::stream<Tin>& in1, hl
 #else
 	int tmp3 = tmp0 + tmp1 - tmp2;
 #endif
-	Tout tmp4 = -tmp3*scale_factor + MIN_HIST_BITS;
+	Tout tmp4 = -tmp3*scale_factor + MIN_HIST_BITS_NO_OVERFLOW;
 
 	out.write(tmp4);
 

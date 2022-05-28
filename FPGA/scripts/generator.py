@@ -126,12 +126,33 @@ typedef ap_uint<{0}> MY_PIXEL; \n \
 #define J_HISTO_COLS J_HISTO_ROWS\n \
 #define MIN_HIST_BITS {4}\n \
 //4\n \
-//#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(MYROWS*MYCOLS)))\n \
-// TODO overflow non contemplato :D, sarebbe + 1\n \
-#define MIN_HIST_PE_BITS (MIN_HIST_BITS - {5})\n \
-//5\n \
-//#define MIN_HISTO_PE_BITS (int)(std::ceil(std::log2(ROW_PE_KRNL*COLS_PE_KRNL)))\n \
-//MIN_HIST_BITS - log2(HIST_PE)\n \
+#define MIN_HIST_BITS_NO_OVERFLOW MIN_HIST_BITS - 1\n\
+//#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(N_COUPLES * MYROWS * MYCOLS)))\n \
+//\n \
+#if HIST_PE == 1\n \
+	#define MIN_HIST_PE_BITS (MIN_HIST_BITS)\n \
+#endif\n \
+\n \
+#if HIST_PE == 2\n \
+	#define MIN_HIST_PE_BITS (MIN_HIST_BITS - 1)\n\
+#endif\n\
+\n \
+#if HIST_PE == 4\n\
+	#define MIN_HIST_PE_BITS (MIN_HIST_BITS - 2)\n\
+#endif\n\
+\n \
+#if HIST_PE == 8\n\
+	#define MIN_HIST_PE_BITS (MIN_HIST_BITS - 3)\n\
+#endif\n\
+\n \
+#if HIST_PE == 16\n\
+	#define MIN_HIST_PE_BITS (MIN_HIST_BITS - 4)\n\
+#endif\n\
+\n \
+#if HIST_PE == 32\n\
+	#define MIN_HIST_PE_BITS (MIN_HIST_BITS - 5)\n\
+#endif\n\
+//MIN_HIST_PE_BITS=std::ceil(std::log2(ROW_PE_KRNL*COLS_PE_KRNL)))\n\
 \n \
 \n \
 typedef ap_uint<MIN_HIST_BITS> MinHistBits_t;\n \
@@ -153,7 +174,7 @@ const unsigned int ENTROPY_PE_CONST = ENTROPY_PE;\n \
 \n \
 #define UINT_OUT_ENTROPY_TYPE_BITWIDTH {7}\n \
 //7\n \
-// MAX std::ceil(std::log2( log2(MYROWS*MYCOLS) * (MYROWS*MYCOLS) )) + 1\n \
+// MAX std::ceil(std::log2( log2(N_COUPLES*MYROWS*MYCOLS) * (N_COUPLES*MYROWS*MYCOLS) )) + 1\n \
 #define UINT_OUT_ENTROPY_TYPE ap_uint<UINT_OUT_ENTROPY_TYPE_BITWIDTH>\n \
 \n \
 #define FIXED_BITWIDTH 42\n \
@@ -175,8 +196,8 @@ const unsigned int ENTROPY_PE_CONST = ENTROPY_PE;\n \
 //UNIFORM QUANTIZATION\n \
 #define INTERVAL_NUMBER {9} // L, amount of levels we want for the binning process, thus at the output\n \
 //9\n \
-#define MAX_FREQUENCY {10} // or 255? the maximum number of levels at the input stage\n \
-//10\n\
+#define MAX_FREQUENCY J_HISTO_ROWS // the maximum number of levels at the input stage\
+//\n\
 #define MINIMUM_FREQUENCY 0\n \
 #define INTERVAL_LENGTH ( (MAX_FREQUENCY - MINIMUM_FREQUENCY) / INTERVAL_NUMBER ) // Q = (fmax - fmin )/L\n \
 #define INDEX_QUANTIZED(i) (i/INTERVAL_LENGTH) // Qy(i) =  f - fmin / Q\n \
@@ -245,6 +266,10 @@ class ParametersDerived:
         self.scale_factor = 0
         self.pe_bits = 0
         self.uint_fixed_bitwidth=0
+        #cc and mse
+        self.sumbitwidth=0
+        self.tmp_sumbitwidth=0
+        self.dim_inverse=0
         self.n_couples = 0
 
     def derive_bitwidth(self,data_container):
@@ -257,20 +282,25 @@ class ParametersDerived:
         self.bin_val = bin_val
         self.pe_number = pe_number
         self.entr_acc_size = entr_acc_size
-        self.n_couples = n_couples
-        self.histos_bits = math.ceil(numpy.log2(n_couples*in_dim*in_dim))
+        self.histos_bits = math.ceil(numpy.log2(n_couples*in_dim*in_dim))+1
         self.reduced_lvls = math.ceil(in_bits - bin_val)
         self.quant_levels = math.ceil(2**self.reduced_lvls)
         self.hist_dim = math.ceil(2**self.reduced_lvls)
         self.j_idx_bits = math.ceil(numpy.log2(self.hist_dim*self.hist_dim))
         self.idx_bits = math.ceil(numpy.log2(self.hist_dim))
-        self.reduced_histos_bits = math.ceil(numpy.log2(n_couples*in_dim*in_dim / pe_number))
+        self.reduced_histos_bits = math.ceil(numpy.log2(n_couples*in_dim*in_dim / pe_number))+1
         self.maximum_freq = math.ceil(2**in_bits)
         self.bit_entropy = self.derive_bitwidth(histotype)
-        self.scale_factor = 1 / (n_couples * in_dim * in_dim)
+        self.scale_factor = 1.0 / (n_couples*in_dim*in_dim)
         self.pe_bits = math.ceil(numpy.log2(pe_number))
         self.uint_fixed_bitwidth=math.ceil(math.log2(math.log2(n_couples*in_dim*in_dim)*n_couples*in_dim*in_dim))
+        self.sumbitwidth=math.ceil(in_bits*2+numpy.log2(in_dim)*2)
+        self.tmp_sumbitwidth=math.ceil(self.sumbitwidth-numpy.log2(pe_number))
+        self.n_couples = n_couples
     
+    def getScaleFactor(self):
+        return self.scale_factor
+
     def printDerived(self):
         print("Starting params:\n in_dim {0}\n in_bits {1}\n bin_val {2}\n pe_number {3}\n entr_acc_size {4}\n"\
             .format(self.in_dim,\
@@ -323,7 +353,7 @@ def main():
 
     print_mi_config(args.pe_number, args.in_bits ,\
         args.in_dim,  derived, args.pe_entropy, \
-        fixed , args.cache_mem, args.use_uram, args.vitis, args.out_path)
+        fixed, args.cache_mem, args.use_uram, args.vitis, args.out_path)
 
 if __name__== "__main__":
     main()
