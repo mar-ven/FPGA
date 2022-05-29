@@ -13,7 +13,7 @@
         <config_export format="ip_catalog" rtl="verilog"/>
     </config>
     <UIConfigurations>
-        <UIAutosynConf boardInfo="Zynq UltraScale+ ZCU104 Evaluation Board (xczu7ev-ffvc1156-2-e) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf boardInfo="Zynq UltraScale+ ZCU104 Evaluation Board (xczu7ev-ffvc1156-2-e) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynquplus/zynquplus</Platform>
             <Platform>xilinx/zynquplus/zynquplus_fpv7</Platform>
             <customLibs/>

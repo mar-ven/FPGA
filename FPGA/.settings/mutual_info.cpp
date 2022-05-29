@@ -36,7 +36,7 @@
 #include "utils.hpp"
 #include "stdlib.h"
 
-const unsigned int fifo_in_depth =  (MYROWS*MYCOLS)/(HIST_PE);
+const unsigned int fifo_in_depth =  (N_COUPLES*MYROWS*MYCOLS)/(HIST_PE);
 const unsigned int fifo_out_depth = 1;
 const unsigned int pe_j_h_partition = HIST_PE;
 

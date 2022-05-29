@@ -51,8 +51,6 @@
                                 								
                                 <option id="gnu.cpp.compiler.option.include.paths.1688441442" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/home/users/marco.venere/FPGA"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/new_xilinx/software/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/new_xilinx/software/Vivado/2019.2/lnx64/tools/systemc/include"/>
@@ -86,8 +84,6 @@
                                 <option id="gnu.c.compiler.exe.debug.option.debugging.level.846493964" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
                                 								
                                 <option id="gnu.c.compiler.option.include.paths.41729869" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/users/marco.venere/FPGA"/>
                                     									
                                     <listOptionValue builtIn="false" value="/new_xilinx/software/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
@@ -253,8 +249,6 @@
                                 								
                                 <option id="gnu.cpp.compiler.option.include.paths.1576692739" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/home/users/marco.venere/FPGA"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/new_xilinx/software/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/new_xilinx/software/Vivado/2019.2/lnx64/tools/systemc/include"/>
@@ -278,8 +272,6 @@
                                 <option id="gnu.c.compiler.exe.release.option.debugging.level.1292829744" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
                                 								
                                 <option id="gnu.c.compiler.option.include.paths.1886321580" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/users/marco.venere/FPGA"/>
                                     									
                                     <listOptionValue builtIn="false" value="/new_xilinx/software/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									

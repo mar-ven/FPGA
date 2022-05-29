@@ -73,15 +73,15 @@ int main(int argc, char *argv[]){
    MY_PIXEL ref[N_COUPLES * DIMENSION * DIMENSION];
    MY_PIXEL flt[N_COUPLES * DIMENSION * DIMENSION];
 
-   int myseed = 45638;
+   //int myseed = 45638;
 
-   std::default_random_engine rng(myseed);
-   std::uniform_int_distribution<int> rng_dist(0, MAX_RANGE);
+   //std::default_random_engine rng(myseed);
+   //std::uniform_int_distribution<int> rng_dist(0, MAX_RANGE);
 
    data_t mihls_0, mihls_1, mihls_2;
    
    for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
-	  ref[i] = static_cast<unsigned char>(rng_dist(rng));
+	  ref[i] = 10;
 	  flt[i] = 0;
    }
 
