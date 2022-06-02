@@ -45,7 +45,7 @@
  /************/
  
  /*********** SIM used values **********/
- #define DIMENSION 8
+ #define DIMENSION 512
  //1
  /*********** End **********/
  
@@ -60,7 +60,7 @@
   Joint Histogram computations
  */
  
- #define HIST_PE 1
+ #define HIST_PE 2
  //2
  #define UNPACK_DATA_BITWIDTH 8
  //0
@@ -82,7 +82,7 @@
  #define J_HISTO_ROWS 256
  //3
  #define J_HISTO_COLS J_HISTO_ROWS
- #define MIN_HIST_BITS 10
+ #define MIN_HIST_BITS 22
  //4
  #define MIN_HIST_BITS_NO_OVERFLOW MIN_HIST_BITS - 1
 //#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(N_COUPLES * MYROWS * MYCOLS)))
@@ -130,14 +130,14 @@
  //#define PACKED_DATA_T_DATA_BITWIDTH (INNER_ENTROPY_TYPE_BITWIDTH*ENTROPY_PE)
  //#define PACKED_DATA_T_DATA_TYPE ap_uint<PACKED_DATA_T_DATA_BITWIDTH>
  
- #define UINT_OUT_ENTROPY_TYPE_BITWIDTH 13
+ #define UINT_OUT_ENTROPY_TYPE_BITWIDTH 26
  //7
  // MAX std::ceil(std::log2( log2(N_COUPLES*MYROWS*MYCOLS) * (N_COUPLES*MYROWS*MYCOLS) )) + 1
  #define UINT_OUT_ENTROPY_TYPE ap_uint<UINT_OUT_ENTROPY_TYPE_BITWIDTH>
  
  #define FIXED_BITWIDTH 42
  #define FIXED_INT_BITWIDTH UINT_OUT_ENTROPY_TYPE_BITWIDTH
- //#define FIXED ap_ufixed<42, 13>
+ //#define FIXED ap_ufixed<42, 26>
  //8
  #ifndef FIXED
      #define ENTROPY_TYPE data_t
@@ -160,7 +160,7 @@
  #define INDEX_QUANTIZED(i) (i/INTERVAL_LENGTH) // Qy(i) =  f - fmin / Q
  
  /*****************/
- const ENTROPY_TYPE scale_factor = 0.001953125f;
+ const ENTROPY_TYPE scale_factor = 4.76837158203125e-07f;
 //11 
  //constexpr float scale_factor = 1.0f /(N_COUPLES * DIMENSION*DIMENSION);
 

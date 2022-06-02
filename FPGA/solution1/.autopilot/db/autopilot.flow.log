@@ -2087,3 +2087,1011 @@ INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 Command   cosim_design done; 6014.75 sec.
 Command ap_source done; 6018.04 sec.
 Execute cleanup_all 
+INFO-FLOW: Workspace /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1 opened at Tue May 31 18:56:46 CEST 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.14 sec.
+Command     ap_source done; 0.14 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data single -quiet 
+Command       ap_part_info done; 4.29 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 4.59 sec.
+Execute     ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 4.88 sec.
+Execute   csim_design -clean -quiet 
+Execute     source /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 0.85 sec.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 15.71 sec.
+Command ap_source done; error code: 1; 20.6 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1 opened at Tue May 31 19:00:35 CEST 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data single -quiet 
+Command       ap_part_info done; 2.94 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 3.12 sec.
+Execute     ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 3.34 sec.
+Execute   csim_design -clean -quiet 
+Execute     source /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 15.03 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 26.29 sec.
+Command ap_source done; 29.64 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1 opened at Tue May 31 19:04:09 CEST 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data single -quiet 
+Command       ap_part_info done; 2.89 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 3.07 sec.
+Execute     ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 3.28 sec.
+Execute   csim_design -clean -quiet 
+Execute     source /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 29.58 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 40.72 sec.
+Command ap_source done; 44 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1 opened at Thu Jun 02 14:27:41 CEST 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data single -quiet 
+Command       ap_part_info done; 2.93 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 3.11 sec.
+Execute     ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 3.32 sec.
+Execute   csim_design -clean -quiet 
+Execute     source /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 29.74 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 40.78 sec.
+Command ap_source done; 44.11 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1 opened at Thu Jun 02 14:30:40 CEST 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data single -quiet 
+Command       ap_part_info done; 2.83 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 3 sec.
+Execute     ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 3.21 sec.
+Execute   csim_design -clean -quiet 
+Execute     source /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 60.71 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 71.18 sec.
+Command ap_source done; 74.39 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1 opened at Thu Jun 02 15:21:03 CEST 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data single -quiet 
+Command       ap_part_info done; 2.84 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 3.02 sec.
+Execute     ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 3.23 sec.
+Execute   csim_design -clean -quiet 
+Execute     source /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 60.02 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 70.97 sec.
+Command ap_source done; 74.2 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1 opened at Thu Jun 02 15:23:46 CEST 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data single -quiet 
+Command       ap_part_info done; 2.89 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 3.06 sec.
+Execute     ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 3.29 sec.
+Execute   csim_design -clean -quiet 
+Execute     source /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 60.06 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 71.2 sec.
+Command ap_source done; 74.49 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1 opened at Thu Jun 02 15:26:33 CEST 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data single -quiet 
+Command       ap_part_info done; 2.81 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.99 sec.
+Execute     ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 3.2 sec.
+Execute   csim_design -clean -quiet 
+Execute     source /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 58.83 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 69.71 sec.
+Command ap_source done; 72.91 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1 opened at Thu Jun 02 15:29:09 CEST 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /new_xilinx/software/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data single -quiet 
+Command       ap_part_info done; 2.86 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 3.08 sec.
+Execute     ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 3.29 sec.
+Execute   csim_design -clean -quiet 
+Execute     source /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h 
+Execute     is_encrypted /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     is_xip /home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h 
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 118.66 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 129.86 sec.
+Command ap_source done; 133.15 sec.
+Execute cleanup_all 

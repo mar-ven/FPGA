@@ -5,11 +5,11 @@
 ############################################################
 open_project FPGA
 set_top mutual_information_master
-add_files FPGA/.settings/entropy.h
-add_files FPGA/.settings/histogram.h
-add_files FPGA/.settings/mutual_info.cpp
-add_files FPGA/.settings/mutual_info.hpp
 add_files FPGA/.settings/utils.hpp
+add_files FPGA/.settings/mutual_info.hpp
+add_files FPGA/.settings/mutual_info.cpp
+add_files FPGA/.settings/histogram.h
+add_files FPGA/.settings/entropy.h
 add_files -tb FPGA/.settings/testbench.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xczu7ev-ffvc1156-2-e}

@@ -60,7 +60,7 @@
   Joint Histogram computations
  */
  
- #define HIST_PE 1
+ #define HIST_PE 2
  //2
  #define UNPACK_DATA_BITWIDTH 8
  //0

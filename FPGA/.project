@@ -29,62 +29,62 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/.apc/.src</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/.apc/.tb</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/solution1/.tcls</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/entropy.h</name>
 			<type>1</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/.settings/entropy.h</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/entropy.h</location>
 		</link>
 		<link>
 			<name>source/histogram.h</name>
 			<type>1</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/.settings/histogram.h</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/histogram.h</location>
 		</link>
 		<link>
 			<name>source/mutual_info.cpp</name>
 			<type>1</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/.settings/mutual_info.cpp</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.cpp</location>
 		</link>
 		<link>
 			<name>source/mutual_info.hpp</name>
 			<type>1</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/.settings/mutual_info.hpp</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/mutual_info.hpp</location>
 		</link>
 		<link>
 			<name>source/utils.hpp</name>
 			<type>1</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/.settings/utils.hpp</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/utils.hpp</location>
 		</link>
 		<link>
 			<name>testbench/testbench.cpp</name>
 			<type>1</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/.settings/testbench.cpp</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/.settings/testbench.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/solution1/solution1.directive</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/solution1/directives.tcl</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/users/marco.venere/FPGA/FPGA/solution1/script.tcl</location>
+			<location>/home/users/giuseppe.sorrentino/Desktop/FPGA/FPGA/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>
