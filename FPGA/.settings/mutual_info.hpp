@@ -60,11 +60,11 @@
   Joint Histogram computations
  */
  
- #define HIST_PE 2
+ #define HIST_PE 1
  //2
  #define UNPACK_DATA_BITWIDTH 8
  //0
- #define N_COUPLES 8
+ #define N_COUPLES_MAX 8
  // 14
  #define UNPACK_DATA_TYPE ap_uint<UNPACK_DATA_BITWIDTH>
  
@@ -160,14 +160,14 @@
  #define INDEX_QUANTIZED(i) (i/INTERVAL_LENGTH) // Qy(i) =  f - fmin / Q
  
  /*****************/
- const ENTROPY_TYPE scale_factor = 4.76837158203125e-07f;
+ //const ENTROPY_TYPE scale_factor = 4.76837158203125e-07f;
 //11 
  //constexpr float scale_factor = 1.0f /(N_COUPLES * DIMENSION*DIMENSION);
 
  #ifndef CACHING
-     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info);
+     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info, unsigned int n_couples);
  #else
-     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int* status);
+     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int* status, unsigned int n_couples);
  #endif
  
  //12 

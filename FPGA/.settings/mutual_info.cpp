@@ -36,7 +36,7 @@
 #include "utils.hpp"
 #include "stdlib.h"
 
-const unsigned int fifo_in_depth =  (N_COUPLES*MYROWS*MYCOLS)/(HIST_PE);
+const unsigned int fifo_in_depth =  (N_COUPLES_MAX*MYROWS*MYCOLS)/(HIST_PE);
 const unsigned int fifo_out_depth = 1;
 const unsigned int pe_j_h_partition = HIST_PE;
 
@@ -50,7 +50,7 @@ typedef enum FUNCTION_T {
 } FUNCTION;
 
 
-void compute(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref,  data_t * mutual_info, bool end_reset){
+void compute(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref,  data_t * mutual_info, bool end_reset, unsigned int n_couples){
 	//The end_reset params resets the content of j_h;
 	//If not set, the PE memories will accumulate over different iterations.
 	//It is set to 1 at the end of the data flow.
@@ -133,28 +133,28 @@ static	hls::stream<data_t> mutual_information_stream("mutual_information_stream"
 	// End Step 2
 
 
-	// Step 3: Compute histograms per row and column
-	tri_stream<PACKED_HIST_DATA_TYPE, J_HISTO_ROWS*J_HISTO_COLS/ENTROPY_PE>(joint_j_h_stream, joint_j_h_stream_0, joint_j_h_stream_1, joint_j_h_stream_2);
+		// Step 3: Compute histograms per row and column
+		tri_stream<PACKED_HIST_DATA_TYPE, J_HISTO_ROWS*J_HISTO_COLS/ENTROPY_PE>(joint_j_h_stream, joint_j_h_stream_0, joint_j_h_stream_1, joint_j_h_stream_2);
 
-	hist_row<PACKED_HIST_DATA_TYPE, J_HISTO_ROWS, J_HISTO_COLS/ENTROPY_PE, PACKED_HIST_DATA_TYPE, HIST_PE_TYPE, MIN_HIST_BITS>(joint_j_h_stream_0, row_hist_stream);
-	hist_col<PACKED_HIST_DATA_TYPE, J_HISTO_ROWS, J_HISTO_COLS/ENTROPY_PE>(joint_j_h_stream_1, col_hist_stream);
-	// End Step 3
-
-
-	// Step 4: Compute Entropies
-	WRAPPER_ENTROPY(ENTROPY_PE)<PACKED_HIST_DATA_TYPE, HIST_TYPE, OUT_ENTROPY_TYPE, J_HISTO_ROWS*J_HISTO_COLS/ENTROPY_PE>(joint_j_h_stream_2, full_hist_split_stream, full_entropy_split_stream, full_entropy_stream);
-	WRAPPER_ENTROPY(ENTROPY_PE)<PACKED_HIST_DATA_TYPE, HIST_TYPE, OUT_ENTROPY_TYPE, J_HISTO_ROWS/ENTROPY_PE>(row_hist_stream, row_hist_split_stream, row_entropy_split_stream, row_entropy_stream);
-	WRAPPER_ENTROPY(ENTROPY_PE)<PACKED_HIST_DATA_TYPE, HIST_TYPE, OUT_ENTROPY_TYPE, J_HISTO_COLS/ENTROPY_PE>(col_hist_stream, col_hist_split_stream, col_entropy_split_stream, col_entropy_stream);
-	// End Step 4
+		hist_row<PACKED_HIST_DATA_TYPE, J_HISTO_ROWS, J_HISTO_COLS/ENTROPY_PE, PACKED_HIST_DATA_TYPE, HIST_PE_TYPE, MIN_HIST_BITS>(joint_j_h_stream_0, row_hist_stream);
+		hist_col<PACKED_HIST_DATA_TYPE, J_HISTO_ROWS, J_HISTO_COLS/ENTROPY_PE>(joint_j_h_stream_1, col_hist_stream);
+		// End Step 3
 
 
-	// Step 6: Mutual information
-	compute_mutual_information<OUT_ENTROPY_TYPE, data_t>(row_entropy_stream, col_entropy_stream, full_entropy_stream, mutual_information_stream);
-	// End Step 6
+		// Step 4: Compute Entropies
+		WRAPPER_ENTROPY(ENTROPY_PE)<PACKED_HIST_DATA_TYPE, HIST_TYPE, OUT_ENTROPY_TYPE, J_HISTO_ROWS*J_HISTO_COLS/ENTROPY_PE>(joint_j_h_stream_2, full_hist_split_stream, full_entropy_split_stream, full_entropy_stream);
+		WRAPPER_ENTROPY(ENTROPY_PE)<PACKED_HIST_DATA_TYPE, HIST_TYPE, OUT_ENTROPY_TYPE, J_HISTO_ROWS/ENTROPY_PE>(row_hist_stream, row_hist_split_stream, row_entropy_split_stream, row_entropy_stream);
+		WRAPPER_ENTROPY(ENTROPY_PE)<PACKED_HIST_DATA_TYPE, HIST_TYPE, OUT_ENTROPY_TYPE, J_HISTO_COLS/ENTROPY_PE>(col_hist_stream, col_hist_split_stream, col_entropy_split_stream, col_entropy_stream);
+		// End Step 4
 
 
-	// Step 7: Write result back to DDR
-	stream2axi<data_t, fifo_out_depth>(mutual_info, mutual_information_stream);
+		// Step 6: Mutual information
+		compute_mutual_information<OUT_ENTROPY_TYPE, data_t>(row_entropy_stream, col_entropy_stream, full_entropy_stream, mutual_information_stream, n_couples);
+		// End Step 6
+
+
+		// Step 7: Write result back to DDR
+		stream2axi<data_t, fifo_out_depth>(mutual_info, mutual_information_stream, end_reset);
 
 }
 
@@ -176,7 +176,7 @@ extern "C"{
 #else
 	void mutual_information_master
 #endif //KERNEL_NAME
-(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info){
+(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info, unsigned int n_couples){
 #pragma HLS INTERFACE m_axi port=input_img depth=fifo_in_depth offset=slave bundle=gmem0
 #pragma HLS INTERFACE m_axi port=input_ref depth=fifo_in_depth offset=slave bundle=gmem1
 #pragma HLS INTERFACE m_axi port=mutual_info depth=1 offset=slave bundle=gmem2
@@ -186,13 +186,12 @@ extern "C"{
 #pragma HLS INTERFACE s_axilite port=mutual_info register bundle=control
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
-	for(int k = 0; k < N_COUPLES ; k++) {
-		compute(input_img + k * DIMENSION * DIMENSION/HIST_PE, input_ref + k * DIMENSION * DIMENSION/HIST_PE, mutual_info, k == N_COUPLES-1);
+	if(n_couples > N_COUPLES_MAX)
+		n_couples = N_COUPLES_MAX;
+
+	compute_loop: for(int k = 0; k < n_couples ; k++) {
+		compute(input_img + k * DIMENSION * DIMENSION/HIST_PE, input_ref + k * DIMENSION * DIMENSION/HIST_PE, mutual_info, k == n_couples - 1, n_couples);
 	}
-/*	for(int k = 0; k < N_COUPLES % HIST_PE; k++) {
-		compute(input_img + k * DIMENSION * DIMENSION/HIST_PE, input_ref + k * DIMENSION * DIMENSION/HIST_PE, mutual_info, k == N_COUPLES-1);
-	}
-*/
 }
 
 
@@ -206,7 +205,7 @@ extern "C"{
 #else
 	void mutual_information_master
 #endif //KERNEL_NAME
-(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int *status){
+(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int *status, unsigned int n_couples){
 #pragma HLS INTERFACE m_axi port=input_img depth=fifo_in_depth offset=slave bundle=gmem0
 #pragma HLS INTERFACE m_axi port=mutual_info depth=1 offset=slave bundle=gmem2
 #pragma HLS INTERFACE m_axi port=status depth=1 offset=slave bundle=gmem1
@@ -218,7 +217,7 @@ extern "C"{
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
 
-	static INPUT_DATA_TYPE ref_img[N_COUPLES * DIMENSION * DIMENSION] = {0};
+	static INPUT_DATA_TYPE ref_img[n_couples * DIMENSION * DIMENSION] = {0};
 
 #ifdef URAM
 #pragma HLS RESOURCE variable=ref_img core=RAM_1P_URAM
@@ -229,11 +228,10 @@ extern "C"{
 					*status = 1;
 					*mutual_info = 0.0;
 					break;
-	case COMPUTE:	for(int k = 0; k < N_COUPLES / HIST_PE; k++) {
-						compute(input_img + k * DIMENSION * DIMENSION, input_ref + k * DIMENSION * DIMENSION, mutual_info, k == N_COUPLES / HIST_PE- 1);
-					}
-					for(int k = 0; k < N_COUPLES % HIST_PE; k++) {
-						compute(input_img + k * DIMENSION * DIMENSION, input_ref + k * DIMENSION * DIMENSION, mutual_info, k == N_COUPLES % HIST_PE - 1);
+	case COMPUTE:	if(n_couples > N_COUPLES_MAX)
+						n_couples = N_COUPLES_MAX;
+					compute_loop_2: for(int k = 0; k < n_couples; k++) {
+						compute(input_img + k * DIMENSION * DIMENSION / HIST_PE, input_ref + k * DIMENSION * DIMENSION / HIST_PE, mutual_info, k == n_couples - 1, n_couples);
 					}
 					*status = 1;
 					break;

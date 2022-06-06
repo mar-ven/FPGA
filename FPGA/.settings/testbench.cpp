@@ -68,10 +68,10 @@ typedef unsigned char MY_PIXEL;
  #endif
 */
 int main(int argc, char *argv[]){
-
+   unsigned int n_couples = 8;
 //vivado_hls FPGA/solution1/script.tcl 
-   MY_PIXEL ref[N_COUPLES * DIMENSION * DIMENSION];
-   MY_PIXEL flt[N_COUPLES * DIMENSION * DIMENSION];
+   MY_PIXEL ref[n_couples * DIMENSION * DIMENSION];
+   MY_PIXEL flt[n_couples * DIMENSION * DIMENSION];
 
    int myseed = 45638;
 
@@ -80,18 +80,18 @@ int main(int argc, char *argv[]){
 
    data_t mihls_0, mihls_1, mihls_2;
    
-   for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
+   for(int i = 0; i < n_couples * DIMENSION * DIMENSION; i++) {
 	  ref[i] = static_cast<unsigned char>(rng_dist(rng));
    }
 
 #ifdef CACHING
    int status = 0;
    printf("Loading image...\n");
-   mutual_information_master((INPUT_DATA_TYPE*)ref, &mihls_0, 0, &status);
+   mutual_information_master((INPUT_DATA_TYPE*)ref, &mihls_0, 0, &status, n_couples);
    printf("Status %d\n", status);
 #endif
 
-   for(int i = 0; i < N_COUPLES * DIMENSION * DIMENSION; i++) {
+   for(int i = 0; i < n_couples * DIMENSION * DIMENSION; i++) {
       flt[i] = static_cast<unsigned char>(rng_dist(rng));
    }
 
@@ -103,7 +103,7 @@ int main(int argc, char *argv[]){
       }
    }
 
-   for(int k = 0; k < N_COUPLES; k++) {
+   for(int k = 0; k < n_couples; k++) {
 	   for(int i=0;i<DIMENSION;i++){
 		  for(int j=0;j<DIMENSION;j++){
 			 unsigned int a=ref[k * DIMENSION * DIMENSION + i * DIMENSION + j];
@@ -115,7 +115,7 @@ int main(int argc, char *argv[]){
 
    for (int i=0; i<J_HISTO_ROWS; i++) {
       for (int j=0; j<J_HISTO_COLS; j++) {
-         j_h[i][j] = j_h[i][j]/(N_COUPLES*DIMENSION*DIMENSION);
+         j_h[i][j] = j_h[i][j]/(n_couples*DIMENSION*DIMENSION);
       }
    }
 
@@ -175,23 +175,23 @@ int main(int argc, char *argv[]){
    printf("Software MI %lf\n",mutualinfo);
 
 #ifndef CACHING
-   mutual_information_master((INPUT_DATA_TYPE*)flt, (INPUT_DATA_TYPE*)ref, &mihls_0);
+   mutual_information_master((INPUT_DATA_TYPE*)flt, (INPUT_DATA_TYPE*)ref, &mihls_0, n_couples);
 
   printf("First Hardware MI %f\n", mihls_0);
 
-  mutual_information_master((INPUT_DATA_TYPE*)flt, (INPUT_DATA_TYPE*)ref, &mihls_1);
+  mutual_information_master((INPUT_DATA_TYPE*)flt, (INPUT_DATA_TYPE*)ref, &mihls_1, n_couples);
   printf("Second Hardware MI %f\n", mihls_1);
 #else
-   mutual_information_master((INPUT_DATA_TYPE*)flt, &mihls_0, 1, &status);
+   mutual_information_master((INPUT_DATA_TYPE*)flt, &mihls_0, 1, &status, n_couples);
 
    printf("First Hardware MI %f\n", mihls_0);
    printf("Status %d\n", status);
 
-   mutual_information_master((INPUT_DATA_TYPE*)flt, &mihls_1, 1, &status);
+   mutual_information_master((INPUT_DATA_TYPE*)flt, &mihls_1, 1, &status, n_couples);
    printf("Second Hardware MI %f\n", mihls_1);
    printf("Status %d\n", status);
 
-   mutual_information_master((INPUT_DATA_TYPE*)flt, &mihls_2, 2, &status);
+   mutual_information_master((INPUT_DATA_TYPE*)flt, &mihls_2, 2, &status, n_couples);
    printf("Status %d\n", status);
 #endif
 

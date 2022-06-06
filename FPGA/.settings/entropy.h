@@ -149,7 +149,7 @@ void hist_col(hls::stream<T> &in_stream, hls::stream<T> &out_stream){
 
 
 template<typename Tin, typename Tout>
-void compute_mutual_information(hls::stream<Tin>& in0, hls::stream<Tin>& in1, hls::stream<Tin>& in2, hls::stream<Tout>& out){
+void compute_mutual_information(hls::stream<Tin>& in0, hls::stream<Tin>& in1, hls::stream<Tin>& in2, hls::stream<Tout>& out, unsigned int n_couples){
 
 	Tin tmp0 = in0.read();
 	Tin tmp1 = in1.read();
@@ -160,7 +160,7 @@ void compute_mutual_information(hls::stream<Tin>& in0, hls::stream<Tin>& in1, hl
 #else
 	int tmp3 = tmp0 + tmp1 - tmp2;
 #endif
-	Tout tmp4 = -tmp3*scale_factor + MIN_HIST_BITS_NO_OVERFLOW;
+	Tout tmp4 = -tmp3*1.0f/(n_couples*DIMENSION*DIMENSION) + MIN_HIST_BITS_NO_OVERFLOW - (std::log2(N_COUPLES_MAX) - std::ceil(std::log2(n_couples)));
 
 	out.write(tmp4);
 
