@@ -7,3 +7,6 @@ FPGA/FPGA/
 FPGA/solution1
 FPGA/vivado_hls.app
 .vscode/
+FPGA/.apc/
+*.launch
+FPGA/.cproject
