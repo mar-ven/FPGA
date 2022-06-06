@@ -1,0 +1,9 @@
+*.log
+FPGA/solution1/.autopilot
+FPGA/.settings/language.settings.xml
+FPGA/.project
+FPGA/.vivado_hls_log_all.xml
+FPGA/FPGA/
+FPGA/solution1
+FPGA/vivado_hls.app
+.vscode/
