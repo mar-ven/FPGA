@@ -124,6 +124,8 @@ static	hls::stream<data_t> mutual_information_stream("mutual_information_stream"
 
 	split_stream<INPUT_DATA_TYPE, UNPACK_DATA_TYPE, UNPACK_DATA_BITWIDTH, NUM_INPUT_DATA, HIST_PE>(ref_stream, ref_pe_stream);
 	split_stream<INPUT_DATA_TYPE, UNPACK_DATA_TYPE, UNPACK_DATA_BITWIDTH, NUM_INPUT_DATA, HIST_PE>(flt_stream, flt_pe_stream);
+	float scale_factor = compute_scale_factor(n_couples, end_reset);
+	unsigned int unused_bits = compute_unused_bits(n_couples, end_reset);
 	// End Step 1
 
 
@@ -149,7 +151,7 @@ static	hls::stream<data_t> mutual_information_stream("mutual_information_stream"
 
 
 		// Step 6: Mutual information
-		compute_mutual_information<OUT_ENTROPY_TYPE, data_t>(row_entropy_stream, col_entropy_stream, full_entropy_stream, mutual_information_stream, n_couples);
+		compute_mutual_information<OUT_ENTROPY_TYPE, data_t>(row_entropy_stream, col_entropy_stream, full_entropy_stream, mutual_information_stream, scale_factor, unused_bits);
 		// End Step 6
 
 
@@ -186,8 +188,9 @@ extern "C"{
 #pragma HLS INTERFACE s_axilite port=mutual_info register bundle=control
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
-	if(n_couples > N_COUPLES_MAX)
+	if(n_couples > N_COUPLES_MAX) {
 		n_couples = N_COUPLES_MAX;
+	}
 
 	compute_loop: for(int k = 0; k < n_couples ; k++) {
 		compute(input_img + k * DIMENSION * DIMENSION/HIST_PE, input_ref + k * DIMENSION * DIMENSION/HIST_PE, mutual_info, k == n_couples - 1, n_couples);

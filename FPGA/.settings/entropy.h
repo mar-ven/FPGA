@@ -149,21 +149,31 @@ void hist_col(hls::stream<T> &in_stream, hls::stream<T> &out_stream){
 
 
 template<typename Tin, typename Tout>
-void compute_mutual_information(hls::stream<Tin>& in0, hls::stream<Tin>& in1, hls::stream<Tin>& in2, hls::stream<Tout>& out, unsigned int n_couples){
+void compute_mutual_information(hls::stream<Tin>& in0, hls::stream<Tin>& in1, hls::stream<Tin>& in2, hls::stream<Tout>& out, float scale_factor, float unused_bits){
 
 	Tin tmp0 = in0.read();
 	Tin tmp1 = in1.read();
 	Tin tmp2 = in2.read();
+
+	
 
 #ifndef FIXED
 	Tin tmp3 = tmp0 + tmp1 - tmp2;
 #else
 	int tmp3 = tmp0 + tmp1 - tmp2;
 #endif
-	Tout tmp4 = -tmp3*1.0f/(n_couples*DIMENSION*DIMENSION) + MIN_HIST_BITS_NO_OVERFLOW - (std::log2(N_COUPLES_MAX) - std::ceil(std::log2(n_couples)));
-
+	//Tout tmp4 = -tmp3*1.0f/(n_couples*DIMENSION*DIMENSION) + MIN_HIST_BITS_NO_OVERFLOW - (std::log2(N_COUPLES_MAX) - std::ceil(std::log2(n_couples)));
+	Tout tmp4 = -tmp3*1.0f/scale_factor + MIN_HIST_BITS_NO_OVERFLOW - unused_bits;
 	out.write(tmp4);
 
+}
+
+float compute_scale_factor(unsigned int n_couples, bool end_reset) {
+	return end_reset ? n_couples*DIMENSION*DIMENSION : 1;
+}
+
+float compute_unused_bits(unsigned int n_couples, bool end_reset) {
+	return end_reset ? hls::log2f(N_COUPLES_MAX) - hls::ceil(hls::log2f(n_couples)) : 0;
 }
 
 template<typename T, unsigned int dim>

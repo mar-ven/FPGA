@@ -60,12 +60,12 @@
   Joint Histogram computations
  */
  
- #define HIST_PE 1
+ #define HIST_PE 2
  //2
  #define UNPACK_DATA_BITWIDTH 8
  //0
  #define N_COUPLES_MAX 8
- // 14
+ // 13
  #define UNPACK_DATA_TYPE ap_uint<UNPACK_DATA_BITWIDTH>
  
  #define INPUT_DATA_BITWIDTH (HIST_PE*UNPACK_DATA_BITWIDTH)
@@ -85,7 +85,7 @@
  #define MIN_HIST_BITS 22
  //4
  #define MIN_HIST_BITS_NO_OVERFLOW MIN_HIST_BITS - 1
-//#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(N_COUPLES * MYROWS * MYCOLS)))
+//#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(N_COUPLES_MAX * MYROWS * MYCOLS)))
  //
  #if HIST_PE == 1
  	#define MIN_HIST_PE_BITS (MIN_HIST_BITS)
@@ -132,7 +132,7 @@
  
  #define UINT_OUT_ENTROPY_TYPE_BITWIDTH 26
  //7
- // MAX std::ceil(std::log2( log2(N_COUPLES*MYROWS*MYCOLS) * (N_COUPLES*MYROWS*MYCOLS) )) + 1
+ // MAX std::ceil(std::log2( log2(N_COUPLES_MAX*MYROWS*MYCOLS) * (N_COUPLES_MAX*MYROWS*MYCOLS) )) + 1
  #define UINT_OUT_ENTROPY_TYPE ap_uint<UINT_OUT_ENTROPY_TYPE_BITWIDTH>
  
  #define FIXED_BITWIDTH 42
@@ -160,19 +160,16 @@
  #define INDEX_QUANTIZED(i) (i/INTERVAL_LENGTH) // Qy(i) =  f - fmin / Q
  
  /*****************/
- //const ENTROPY_TYPE scale_factor = 4.76837158203125e-07f;
-//11 
- //constexpr float scale_factor = 1.0f /(N_COUPLES * DIMENSION*DIMENSION);
-
+ 
  #ifndef CACHING
-     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info, unsigned int n_couples);
+     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info);
  #else
-     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int* status, unsigned int n_couples);
+     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int* status);
  #endif
  
- //12 
+ //11 
  #define ACC_SIZE 16
- // 13
+ // 12
  
 
 #endif
