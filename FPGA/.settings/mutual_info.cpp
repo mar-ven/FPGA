@@ -39,6 +39,7 @@
 const unsigned int fifo_in_depth =  (N_COUPLES_MAX*MYROWS*MYCOLS)/(HIST_PE);
 const unsigned int fifo_out_depth = 1;
 const unsigned int pe_j_h_partition = HIST_PE;
+const unsigned int maxCouples=N_COUPLES_MAX;
 
 typedef MinHistBits_t HIST_TYPE;
 typedef MinHistPEBits_t HIST_PE_TYPE;
@@ -190,6 +191,7 @@ extern "C"{
 		n_couples = N_COUPLES_MAX;
 
 	compute_loop: for(int k = 0; k < n_couples ; k++) {
+#pragma HLS LOOP_TRIPCOUNT min=1 max=maxCouples
 		compute(input_img + k * DIMENSION * DIMENSION/HIST_PE, input_ref + k * DIMENSION * DIMENSION/HIST_PE, mutual_info, k == n_couples - 1, n_couples);
 	}
 }

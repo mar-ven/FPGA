@@ -160,7 +160,7 @@ void compute_mutual_information(hls::stream<Tin>& in0, hls::stream<Tin>& in1, hl
 #else
 	int tmp3 = tmp0 + tmp1 - tmp2;
 #endif
-	Tout tmp4 = -tmp3*1.0f/(n_couples*DIMENSION*DIMENSION) + MIN_HIST_BITS_NO_OVERFLOW - (std::log2(N_COUPLES_MAX) - std::ceil(std::log2(n_couples)));
+	Tout tmp4 = -tmp3*1.0f/(n_couples*DIMENSION*DIMENSION) + MIN_HIST_BITS_NO_OVERFLOW - (hls::log2f(N_COUPLES_MAX) - hls::ceil(hls::log2f(n_couples)));
 
 	out.write(tmp4);
 
