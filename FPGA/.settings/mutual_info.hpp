@@ -45,7 +45,7 @@
  /************/
  
  /*********** SIM used values **********/
- #define DIMENSION 512
+ #define DIMENSION 32
  //1
  /*********** End **********/
  
@@ -82,7 +82,7 @@
  #define J_HISTO_ROWS 256
  //3
  #define J_HISTO_COLS J_HISTO_ROWS
- #define MIN_HIST_BITS 22
+ #define MIN_HIST_BITS 14
  //4
  #define MIN_HIST_BITS_NO_OVERFLOW MIN_HIST_BITS - 1
 //#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(N_COUPLES_MAX * MYROWS * MYCOLS)))
@@ -130,14 +130,14 @@
  //#define PACKED_DATA_T_DATA_BITWIDTH (INNER_ENTROPY_TYPE_BITWIDTH*ENTROPY_PE)
  //#define PACKED_DATA_T_DATA_TYPE ap_uint<PACKED_DATA_T_DATA_BITWIDTH>
  
- #define UINT_OUT_ENTROPY_TYPE_BITWIDTH 26
+ #define UINT_OUT_ENTROPY_TYPE_BITWIDTH 17
  //7
  // MAX std::ceil(std::log2( log2(N_COUPLES_MAX*MYROWS*MYCOLS) * (N_COUPLES_MAX*MYROWS*MYCOLS) )) + 1
  #define UINT_OUT_ENTROPY_TYPE ap_uint<UINT_OUT_ENTROPY_TYPE_BITWIDTH>
  
  #define FIXED_BITWIDTH 42
  #define FIXED_INT_BITWIDTH UINT_OUT_ENTROPY_TYPE_BITWIDTH
- //#define FIXED ap_ufixed<42, 26>
+ //#define FIXED ap_ufixed<42, 17>
  //8
  #ifndef FIXED
      #define ENTROPY_TYPE data_t

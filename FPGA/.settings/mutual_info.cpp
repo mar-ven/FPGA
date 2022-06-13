@@ -39,6 +39,7 @@
 const unsigned int fifo_in_depth =  (N_COUPLES_MAX*MYROWS*MYCOLS)/(HIST_PE);
 const unsigned int fifo_out_depth = 1;
 const unsigned int pe_j_h_partition = HIST_PE;
+const unsigned int maxCOuples = N_COUPLES_MAX;
 
 typedef MinHistBits_t HIST_TYPE;
 typedef MinHistPEBits_t HIST_PE_TYPE;
@@ -186,6 +187,7 @@ extern "C"{
 #pragma HLS INTERFACE s_axilite port=input_img bundle=control
 #pragma HLS INTERFACE s_axilite port=input_ref bundle=control
 #pragma HLS INTERFACE s_axilite port=mutual_info register bundle=control
+#pragma HLS INTERFACE s_axilite port=n_couples register bundle=control
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
 	if(n_couples > N_COUPLES_MAX) {
@@ -193,6 +195,7 @@ extern "C"{
 	}
 
 	compute_loop: for(int k = 0; k < n_couples ; k++) {
+#pragma HLS TRIPCOUNT min=1 max=maxCouples
 		compute(input_img + k * DIMENSION * DIMENSION/HIST_PE, input_ref + k * DIMENSION * DIMENSION/HIST_PE, mutual_info, k == n_couples - 1, n_couples);
 	}
 }
@@ -217,6 +220,7 @@ extern "C"{
 #pragma HLS INTERFACE s_axilite port=mutual_info register bundle=control
 #pragma HLS INTERFACE s_axilite port=functionality register bundle=control
 #pragma HLS INTERFACE s_axilite port=status register bundle=control
+#pragma HLS INTERFACE s_axilite port=n_couples register bundle=control
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
 
