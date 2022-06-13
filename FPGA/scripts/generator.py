@@ -205,9 +205,9 @@ const unsigned int ENTROPY_PE_CONST = ENTROPY_PE;\n \
 /*****************/\n \
 \n \
 #ifndef CACHING\n \
-    extern {11} void mutual_information_master(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info);\n \
+    extern {11} void mutual_information_master(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info, unsigned int n_couples);\n \
 #else\n \
-    extern {11} void mutual_information_master(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int* status);\n \
+    extern {11} void mutual_information_master(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int* status, unsigned int n_couples);\n \
 #endif\n \
 \n \
 //11 \n \

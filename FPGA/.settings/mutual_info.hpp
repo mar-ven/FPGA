@@ -60,7 +60,7 @@
   Joint Histogram computations
  */
  
- #define HIST_PE 2
+ #define HIST_PE 32
  //2
  #define UNPACK_DATA_BITWIDTH 8
  //0
@@ -162,9 +162,9 @@
  /*****************/
  
  #ifndef CACHING
-     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info);
+     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info, unsigned int n_couples);
  #else
-     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int* status);
+     extern  void mutual_information_master(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int* status, unsigned int n_couples);
  #endif
  
  //11 
