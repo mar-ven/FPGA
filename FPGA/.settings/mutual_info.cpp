@@ -186,6 +186,7 @@ extern "C"{
 #pragma HLS INTERFACE s_axilite port=input_ref bundle=control
 #pragma HLS INTERFACE s_axilite port=mutual_info register bundle=control
 #pragma HLS INTERFACE s_axilite port=return bundle=control
+#pragma HLS INTERFACE s_axilite port=n_couples register bundle=control
 
 	if(n_couples > N_COUPLES_MAX)
 		n_couples = N_COUPLES_MAX;
@@ -217,6 +218,7 @@ extern "C"{
 #pragma HLS INTERFACE s_axilite port=functionality register bundle=control
 #pragma HLS INTERFACE s_axilite port=status register bundle=control
 #pragma HLS INTERFACE s_axilite port=return bundle=control
+#pragma HLS INTERFACE s_axilite port=n_couples register bundle=control
 
 
 	static INPUT_DATA_TYPE ref_img[n_couples * DIMENSION * DIMENSION] = {0};
@@ -233,6 +235,7 @@ extern "C"{
 	case COMPUTE:	if(n_couples > N_COUPLES_MAX)
 						n_couples = N_COUPLES_MAX;
 					compute_loop_2: for(int k = 0; k < n_couples; k++) {
+						#pragma HLS LOOP_TRIPCOUNT min=1 max=maxCouples
 						compute(input_img + k * DIMENSION * DIMENSION / HIST_PE, input_ref + k * DIMENSION * DIMENSION / HIST_PE, mutual_info, k == n_couples - 1, n_couples);
 					}
 					*status = 1;
