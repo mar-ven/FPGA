@@ -187,7 +187,7 @@ extern "C"{
 #pragma HLS INTERFACE s_axilite port=mutual_info register bundle=control
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 #pragma HLS INTERFACE s_axilite port=n_couples register bundle=control
-
+// N-couples pragma correctly added
 	if(n_couples > N_COUPLES_MAX)
 		n_couples = N_COUPLES_MAX;
 
