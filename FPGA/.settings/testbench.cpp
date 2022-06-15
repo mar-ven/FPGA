@@ -68,7 +68,7 @@ typedef unsigned char MY_PIXEL;
  #endif
 */
 int main(int argc, char *argv[]){
-   unsigned int n_couples = 8;
+   unsigned int n_couples = 3;
 //vivado_hls FPGA/solution1/script.tcl 
    MY_PIXEL ref[n_couples * DIMENSION * DIMENSION];
    MY_PIXEL flt[n_couples * DIMENSION * DIMENSION];
