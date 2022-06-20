@@ -6,21 +6,39 @@
     Second Hardware MI 0.022846
     
     test n_couple programmable
-    n_couples = 1 mean error sw-hw =2.1450222e^-05    testbench_error = 
+    FLOAT
+    n_couples = 1 mean error sw-hw =2.1450222e^-05    testbench_error = 0.0017976478
 
-    n_couples = 2 mean error sw-hw =0.0001703836    testbench_error = 
+    n_couples = 2 mean error sw-hw =0.0001703836     
 
-    n_couples = 3 mean error sw-hw =0.00027621165    testbench_error =
+    n_couples = 3 mean error sw-hw =0.00027621165    
 
-    n_couples = 4 mean error sw-hw =0.00025698394    testbench_error =
+    n_couples = 4 mean error sw-hw =0.00025698394    
     
-    n_couples = 5 mean error sw-hw =0.00033112726    testbench_error =
+    n_couples = 5 mean error sw-hw =0.00033112726    
 
-    n_couples = 6 mean error sw-hw =0.00026124754    testbench_error =
+    n_couples = 6 mean error sw-hw =0.00026124754    
     
-    n_couples = 7 mean error sw-hw =0.0002882056    testbench_error =
+    n_couples = 7 mean error sw-hw =0.0002882056     
 
-    n_couples = 8 mean error sw-hw =0.00033770112    testbench_error =
+    n_couples = 8 mean error sw-hw =0.00033770112    testbench_error = 0.00019653626
+
+    FIXED
+    n_couples = 1 mean error sw-hw =9.0047715e^-06
+
+    n_couples = 2 mean error sw-hw =0.00016392097     
+
+    n_couples = 3 mean error sw-hw =0.00021702462    
+
+    n_couples = 4 mean error sw-hw =0.00023704134    
+    
+    n_couples = 5 mean error sw-hw =0.00028783493   
+
+    n_couples = 6 mean error sw-hw =0.000318617  
+    
+    n_couples = 7 mean error sw-hw =0.00030437615    
+
+    n_couples = 8 mean error sw-hw =0.00033280737    
     ---------------------------
     seed = 98562
     Software MI 0.022357
@@ -28,22 +46,39 @@
     Second Hardware MI 0.022701
     
     test n_couple programmable
+    FLOAT
+    n_couples = 1 mean error sw-hw =2.1868944e^-05   testbench_error = 0.0017852768
+
+    n_couples = 2 mean error sw-hw =0.00016373396    
+
+    n_couples = 3 mean error sw-hw =0.00025945195    
+
+    n_couples = 4 mean error sw-hw =0.00026717372    
     
-    n_couples = 1 mean error sw-hw =2.1868944e^-05    testbench_error =
+    n_couples = 5 mean error sw-hw =0.00031847024    
 
-    n_couples = 2 mean error sw-hw =0.00016373396    testbench_error =
-
-    n_couples = 3 mean error sw-hw =0.00025945195    testbench_error =
-
-    n_couples = 4 mean error sw-hw =0.00026717372    testbench_error =
+    n_couples = 6 mean error sw-hw =0.00024591218    
     
-    n_couples = 5 mean error sw-hw =0.00031847024    testbench_error =
+    n_couples = 7 mean error sw-hw =0.00029257126    
 
-    n_couples = 6 mean error sw-hw =0.00024591218    testbench_error =
+    n_couples = 8 mean error sw-hw =0.00029623118    testbench_error = 0.00017271153
+
+    FIXED
+    n_couples = 1 mean error sw-hw =9.219349e^-06
+
+    n_couples = 2 mean error sw-hw =0.00016138554     
+
+    n_couples = 3 mean error sw-hw =0.00027729123    
+
+    n_couples = 4 mean error sw-hw =0.00023520552    
     
-    n_couples = 7 mean error sw-hw =0.00029257126    testbench_error =
+    n_couples = 5 mean error sw-hw =0.0002636697   
 
-    n_couples = 8 mean error sw-hw =0.00029623118    testbench_error =
+    n_couples = 6 mean error sw-hw =0.00028259718  
+    
+    n_couples = 7 mean error sw-hw =0.00031473843    
+
+    n_couples = 8 mean error sw-hw =0.00029499998 
     ---------------------------
     seed = 0
     Software MI 0.022423
@@ -51,21 +86,39 @@
     Second Hardware MI 0.022768
     
     test n_couple programmable
+    FLOAT
     n_couples = 1 mean error sw-hw =2.0964444e^-05    testbench_error =
 
-    n_couples = 2 mean error sw-hw =0.00021076128    testbench_error =
+    n_couples = 2 mean error sw-hw =0.00021076128    
 
-    n_couples = 3 mean error sw-hw =0.00023646839    testbench_error =
+    n_couples = 3 mean error sw-hw =0.00023646839    
 
-    n_couples = 4 mean error sw-hw =0.00022342763    testbench_error =
+    n_couples = 4 mean error sw-hw =0.00022342763    
     
-    n_couples = 5 mean error sw-hw =0.0002775643    testbench_error =
+    n_couples = 5 mean error sw-hw =0.0002775643    
 
-    n_couples = 6 mean error sw-hw =0.0002928363    testbench_error =
+    n_couples = 6 mean error sw-hw =0.0002928363    
+
+    n_couples = 7 mean error sw-hw =0.00028894283   
+
+    n_couples = 8 mean error sw-hw =0.0002839543      testbench_error = 0.00017063115
     
-    n_couples = 7 mean error sw-hw =0.00028894283    testbench_error =
+    FIXED
+    n_couples = 1 mean error sw-hw =8.788705e^-06
 
-    n_couples = 8 mean error sw-hw =0.0002839543    testbench_error =
+    n_couples = 2 mean error sw-hw =0.00014397874     
+
+    n_couples = 3 mean error sw-hw =0.00025077089    
+
+    n_couples = 4 mean error sw-hw =0.00024693907    
+    
+    n_couples = 5 mean error sw-hw =0.00026818365   
+
+    n_couples = 6 mean error sw-hw =0.00028339308 
+    
+    n_couples = 7 mean error sw-hw =0.00034899358    
+
+    n_couples = 8 mean error sw-hw =0.00027864947 
     ---------------------------
 2 arrays of the SAME random content:
     seed = 73541
@@ -74,21 +127,39 @@
     Second Hardware MI 8.046042
     
     test n_couple programmable
+    FLOAT
     n_couples = 1 mean error sw-hw =1.9073487e^-07    testbench_error =
 
-    n_couples = 2 mean error sw-hw =0.023418808    testbench_error =
+    n_couples = 2 mean error sw-hw =0.023418808    
 
-    n_couples = 3 mean error sw-hw =0.032229044    testbench_error =
+    n_couples = 3 mean error sw-hw =0.032229044    
 
-    n_couples = 4 mean error sw-hw =0.037395954    testbench_error =
+    n_couples = 4 mean error sw-hw =0.037395954    
     
-    n_couples = 5 mean error sw-hw =0.040591    testbench_error =
+    n_couples = 5 mean error sw-hw =0.040591    
 
-    n_couples = 6 mean error sw-hw =0.04292474    testbench_error =
+    n_couples = 6 mean error sw-hw =0.04292474  
     
-    n_couples = 7 mean error sw-hw =0.0448102    testbench_error =
+    n_couples = 7 mean error sw-hw =0.0448102   
 
-    n_couples = 8 mean error sw-hw =0.0462132    testbench_error =
+    n_couples = 8 mean error sw-hw =0.0462132    testbench_error = 1.4305115e^-7
+
+    FIXED
+    n_couples = 1 mean error sw-hw =1.0585785e^-05
+
+    n_couples = 2 mean error sw-hw =0.023427581     
+
+    n_couples = 3 mean error sw-hw =0.032236863    
+
+    n_couples = 4 mean error sw-hw =0.037403584    
+    
+    n_couples = 5 mean error sw-hw =0.040598918   
+
+    n_couples = 6 mean error sw-hw =0.004293275 
+    
+    n_couples = 7 mean error sw-hw =0.044818304   
+
+    n_couples = 8 mean error sw-hw =0.046220828 
     ---------------------------
     seed = 3478
     Software MI 7.999920
@@ -96,21 +167,39 @@
     Second Hardware MI 8.045402
     
     test n_couple programmable
+    FLOAT
     n_couples = 1 mean error sw-hw =6.198883e^-07    testbench_error =
 
-    n_couples = 2 mean error sw-hw =0.023634385    testbench_error =
+    n_couples = 2 mean error sw-hw =0.023634385    
 
-    n_couples = 3 mean error sw-hw =0.032432415    testbench_error =
+    n_couples = 3 mean error sw-hw =0.032432415    
 
-    n_couples = 4 mean error sw-hw =0.03721428    testbench_error =
+    n_couples = 4 mean error sw-hw =0.03721428    
     
-    n_couples = 5 mean error sw-hw =0.040363215    testbench_error =
+    n_couples = 5 mean error sw-hw =0.040363215   
 
-    n_couples = 6 mean error sw-hw =0.042557906    testbench_error =
+    n_couples = 6 mean error sw-hw =0.042557906   
     
-    n_couples = 7 mean error sw-hw =0.04435625    testbench_error =
+    n_couples = 7 mean error sw-hw =0.04435625    
 
-    n_couples = 8 mean error sw-hw =0.04577317    testbench_error =
+    n_couples = 8 mean error sw-hw =0.04577317    testbench_error = 0.42518267
+
+    FIXED
+    n_couples = 1 mean error sw-hw =1.0347367^-05
+
+    n_couples = 2 mean error sw-hw =0.023642492     
+
+    n_couples = 3 mean error sw-hw =0.032441188    
+
+    n_couples = 4 mean error sw-hw =0.0372221    
+    
+    n_couples = 5 mean error sw-hw =0.04037113   
+
+    n_couples = 6 mean error sw-hw =0.0042565823 
+    
+    n_couples = 7 mean error sw-hw =0.0444364262   
+
+    n_couples = 8 mean error sw-hw =0.04657808 
     ---------------------------
     seed = 87632
     Software MI 7.999910
@@ -118,22 +207,38 @@
     Second Hardware MI 8.045625
     
     test n_couple programmable
-    n_couples = 1 mean error sw-hw =5.245209e^-07    testbench_error =
+    FLOAT
+    n_couples = 1 mean error sw-hw =5.245209e^-07    testbench_error = 
 
-    n_couples = 2 mean error sw-hw =0.023533821    testbench_error =
+    n_couples = 2 mean error sw-hw =0.023533821    
 
-    n_couples = 3 mean error sw-hw =0.032018423    testbench_error =
+    n_couples = 3 mean error sw-hw =0.032018423    
 
-    n_couples = 4 mean error sw-hw =0.036925696    testbench_error =
+    n_couples = 4 mean error sw-hw =0.036925696    
+
+    n_couples = 5 mean error sw-hw =0.04016652    
+
+    n_couples = 6 mean error sw-hw =0.04261575    
     
-    n_couples = 5 mean error sw-hw =0.04016652    testbench_error =
+    n_couples = 7 mean error sw-hw =0.04438629    
 
-    n_couples = 6 mean error sw-hw =0.04261575    testbench_error =
+    n_couples = 8 mean error sw-hw =0.045950364    testbench_error =1.001358e^-6
+    FIXED
+    n_couples = 1 mean error sw-hw =1.0347367e^-05
+
+    n_couples = 2 mean error sw-hw =0.02354523     
+
+    n_couples = 3 mean error sw-hw =0.0032026816    
+
+    n_couples = 4 mean error sw-hw =0.03693352    
     
-    n_couples = 7 mean error sw-hw =0.04438629    testbench_error =
+    n_couples = 5 mean error sw-hw =0.040174436   
 
-    n_couples = 8 mean error sw-hw =0.045950364    testbench_error =
-    errore_testbench =
+    n_couples = 6 mean error sw-hw =0.04262347 
+    
+    n_couples = 7 mean error sw-hw =0.04439478   
+
+    n_couples = 8 mean error sw-hw =0.045958184 
     ---------------------------
 
 ref array with random elements, flt with zeroes
@@ -143,21 +248,39 @@ ref array with random elements, flt with zeroes
     Second Hardware MI 0.075771
     
     test n_couple programmable
-    n_couples = 1 mean error sw-hw =1.144092e^-06    testbench_error =
+    FLOAT
+    n_couples = 1 mean error sw-hw =1.144092e^-06    testbench_error = 
 
-    n_couples = 2 mean error sw-hw =0.040610503    testbench_error =
+    n_couples = 2 mean error sw-hw =0.040610503    
 
-    n_couples = 3 mean error sw-hw =0.055496432    testbench_error =
+    n_couples = 3 mean error sw-hw =0.055496432    
 
-    n_couples = 4 mean error sw-hw =0.063456535    testbench_error =
+    n_couples = 4 mean error sw-hw =0.063456535    
     
-    n_couples = 5 mean error sw-hw =0.06858635    testbench_error =
+    n_couples = 5 mean error sw-hw =0.06858635    
 
-    n_couples = 6 mean error sw-hw =0.07259555    testbench_error =
+    n_couples = 6 mean error sw-hw =0.07259555    
     
-    n_couples = 7 mean error sw-hw =0.075258635    testbench_error =
+    n_couples = 7 mean error sw-hw =0.075258635    
 
-    n_couples = 8 mean error sw-hw =0.07777252    testbench_error =
+    n_couples = 8 mean error sw-hw =0.07777252    testbench_error = 5.573878e^-7
+
+    FIXED
+    n_couples = 1 mean error sw-hw =223.99997
+
+    n_couples = 2 mean error sw-hw =96.02296     
+
+    n_couples = 3 mean error sw-hw =53.362293    
+
+    n_couples = 4 mean error sw-hw =32.031246    
+    
+    n_couples = 5 mean error sw-hw =19.232258   
+
+    n_couples = 6 mean error sw-hw =10.699534 
+    
+    n_couples = 7 mean error sw-hw =4.6044097   
+
+    n_couples = 8 mean error sw-hw =0.03312149  
     ---------------------------
     seed = 2134
     Software MI 0.000004
@@ -165,21 +288,38 @@ ref array with random elements, flt with zeroes
     Second Hardware MI 0.077797
     
     test n_couple programmable
-    n_couples = 1 mean error sw-hw =2.2888185e^-06    testbench_error =
+    FLOAT
+    n_couples = 1 mean error sw-hw =2.2888185e^-06    testbench_error = 
 
-    n_couples = 2 mean error sw-hw =0.060175058    testbench_error =
+    n_couples = 2 mean error sw-hw =0.060175058    
 
-    n_couples = 3 mean error sw-hw =0.055304743    testbench_error =
+    n_couples = 3 mean error sw-hw =0.055304743    
 
-    n_couples = 4 mean error sw-hw =0.06368466    testbench_error =
+    n_couples = 4 mean error sw-hw =0.06368466    
     
-    n_couples = 5 mean error sw-hw =0.06844654    testbench_error =
+    n_couples = 5 mean error sw-hw =0.06844654    
 
-    n_couples = 6 mean error sw-hw =0.072450206    testbench_error =
+    n_couples = 6 mean error sw-hw =0.072450206    
     
-    n_couples = 7 mean error sw-hw =0.075332835    testbench_error =
+    n_couples = 7 mean error sw-hw =0.075332835    
 
-    n_couples = 8 mean error sw-hw =0.077357866    testbench_error =
+    n_couples = 8 mean error sw-hw =0.077357866    testbench_error = 1.719018e^-07
+    FIXED
+    n_couples = 1 mean error sw-hw =223.99997
+
+    n_couples = 2 mean error sw-hw =96.022705     
+
+    n_couples = 3 mean error sw-hw =53.36219    
+
+    n_couples = 4 mean error sw-hw =32.031353    
+    
+    n_couples = 5 mean error sw-hw =19.23219   
+
+    n_couples = 6 mean error sw-hw =10.699471 
+    
+    n_couples = 7 mean error sw-hw =4.6044397   
+
+    n_couples = 8 mean error sw-hw =0.032948304 
     ---------------------------
     seed = 77899
     Software MI 0.000003
@@ -187,21 +327,38 @@ ref array with random elements, flt with zeroes
     Second Hardware MI 0.077553
     
     test n_couple programmable
+    FLOAT
     n_couples = 1 mean error sw-hw =2.2888185e^-06    testbench_error =
 
-    n_couples = 2 mean error sw-hw =0.04023571    testbench_error =
+    n_couples = 2 mean error sw-hw =0.04023571    
 
-    n_couples = 3 mean error sw-hw =0.055175614    testbench_error =
+    n_couples = 3 mean error sw-hw =0.055175614   
 
-    n_couples = 4 mean error sw-hw =0.06341972    testbench_error =
+    n_couples = 4 mean error sw-hw =0.06341972    
     
-    n_couples = 5 mean error sw-hw =0.06870194    testbench_error =
+    n_couples = 5 mean error sw-hw =0.06870194    
 
-    n_couples = 6 mean error sw-hw =0.07242656    testbench_error =
+    n_couples = 6 mean error sw-hw =0.07242656    
     
-    n_couples = 7 mean error sw-hw =0.07516537    testbench_error =
+    n_couples = 7 mean error sw-hw =0.07516537    
 
-    n_couples = 8 mean error sw-hw =0.07716236    testbench_error =
+    n_couples = 8 mean error sw-hw =0.07716236    testbench_error = 7.400705e^-07
+    FIXED
+    n_couples = 1 mean error sw-hw =223.99997
+
+    n_couples = 2 mean error sw-hw =96.02275     
+
+    n_couples = 3 mean error sw-hw =53.36212    
+
+    n_couples = 4 mean error sw-hw =32.031227    
+    
+    n_couples = 5 mean error sw-hw =19.23231   
+
+    n_couples = 6 mean error sw-hw =10.699459 
+    
+    n_couples = 7 mean error sw-hw =4.6043706   
+
+    n_couples = 8 mean error sw-hw =0.032862473 
     ---------------------------
 
 
